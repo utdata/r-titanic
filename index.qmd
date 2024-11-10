@@ -1,0 +1,14 @@
+---
+title: "r-titanic-data"
+---
+
+Preparing data from the Titanic for various lessons.
+
+I'm looking at two different sources:
+
+- The [Titanic R package](https://github.com/paulhendricks/titanic).
+- The [Titanic Facts website](https://titanicfacts.net/titanic-passenger-list/)
+
+There are some columns in each data set that are not in the other, though perhaps those columns are not that useful.
+
+I'm going with the R package data as it is more consistent.

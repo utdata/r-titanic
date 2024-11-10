@@ -1,0 +1,892 @@
+passenger_id,survived,surname,first_names,class,sex,age,embarked
+1,FALSE,Braund, Mr. Owen Harris,3rd,Male,22,Southampton
+2,TRUE,Cumings, Mrs. John Bradley (Florence Briggs Thayer),1st,Female,38,Cherbourg
+3,TRUE,Heikkinen, Miss. Laina,3rd,Female,26,Southampton
+4,TRUE,Futrelle, Mrs. Jacques Heath (Lily May Peel),1st,Female,35,Southampton
+5,FALSE,Allen, Mr. William Henry,3rd,Male,35,Southampton
+6,FALSE,Moran, Mr. James,3rd,Male,NA,Queenstown
+7,FALSE,McCarthy, Mr. Timothy J,1st,Male,54,Southampton
+8,FALSE,Palsson, Master. Gosta Leonard,3rd,Male,2,Southampton
+9,TRUE,Johnson, Mrs. Oscar W (Elisabeth Vilhelmina Berg),3rd,Female,27,Southampton
+10,TRUE,Nasser, Mrs. Nicholas (Adele Achem),2nd,Female,14,Cherbourg
+11,TRUE,Sandstrom, Miss. Marguerite Rut,3rd,Female,4,Southampton
+12,TRUE,Bonnell, Miss. Elizabeth,1st,Female,58,Southampton
+13,FALSE,Saundercock, Mr. William Henry,3rd,Male,20,Southampton
+14,FALSE,Andersson, Mr. Anders Johan,3rd,Male,39,Southampton
+15,FALSE,Vestrom, Miss. Hulda Amanda Adolfina,3rd,Female,14,Southampton
+16,TRUE,Hewlett, Mrs. (Mary D Kingcome) ,2nd,Female,55,Southampton
+17,FALSE,Rice, Master. Eugene,3rd,Male,2,Queenstown
+18,TRUE,Williams, Mr. Charles Eugene,2nd,Male,NA,Southampton
+19,FALSE,Vander Planke, Mrs. Julius (Emelia Maria Vandemoortele),3rd,Female,31,Southampton
+20,TRUE,Masselmani, Mrs. Fatima,3rd,Female,NA,Cherbourg
+21,FALSE,Fynney, Mr. Joseph J,2nd,Male,35,Southampton
+22,TRUE,Beesley, Mr. Lawrence,2nd,Male,34,Southampton
+23,TRUE,McGowan," Miss. Anna ""Annie""",3rd,Female,15,Queenstown
+24,TRUE,Sloper, Mr. William Thompson,1st,Male,28,Southampton
+25,FALSE,Palsson, Miss. Torborg Danira,3rd,Female,8,Southampton
+26,TRUE,Asplund, Mrs. Carl Oscar (Selma Augusta Emilia Johansson),3rd,Female,38,Southampton
+27,FALSE,Emir, Mr. Farred Chehab,3rd,Male,NA,Cherbourg
+28,FALSE,Fortune, Mr. Charles Alexander,1st,Male,19,Southampton
+29,TRUE,O'Dwyer," Miss. Ellen ""Nellie""",3rd,Female,NA,Queenstown
+30,FALSE,Todoroff, Mr. Lalio,3rd,Male,NA,Southampton
+31,FALSE,Uruchurtu, Don. Manuel E,1st,Male,40,Cherbourg
+32,TRUE,Spencer, Mrs. William Augustus (Marie Eugenie),1st,Female,NA,Cherbourg
+33,TRUE,Glynn, Miss. Mary Agatha,3rd,Female,NA,Queenstown
+34,FALSE,Wheadon, Mr. Edward H,2nd,Male,66,Southampton
+35,FALSE,Meyer, Mr. Edgar Joseph,1st,Male,28,Cherbourg
+36,FALSE,Holverson, Mr. Alexander Oskar,1st,Male,42,Southampton
+37,TRUE,Mamee, Mr. Hanna,3rd,Male,NA,Cherbourg
+38,FALSE,Cann, Mr. Ernest Charles,3rd,Male,21,Southampton
+39,FALSE,Vander Planke, Miss. Augusta Maria,3rd,Female,18,Southampton
+40,TRUE,Nicola-Yarred, Miss. Jamila,3rd,Female,14,Cherbourg
+41,FALSE,Ahlin, Mrs. Johan (Johanna Persdotter Larsson),3rd,Female,40,Southampton
+42,FALSE,Turpin, Mrs. William John Robert (Dorothy Ann Wonnacott),2nd,Female,27,Southampton
+43,FALSE,Kraeff, Mr. Theodor,3rd,Male,NA,Cherbourg
+44,TRUE,Laroche, Miss. Simonne Marie Anne Andree,2nd,Female,3,Cherbourg
+45,TRUE,Devaney, Miss. Margaret Delia,3rd,Female,19,Queenstown
+46,FALSE,Rogers, Mr. William John,3rd,Male,NA,Southampton
+47,FALSE,Lennon, Mr. Denis,3rd,Male,NA,Queenstown
+48,TRUE,O'Driscoll, Miss. Bridget,3rd,Female,NA,Queenstown
+49,FALSE,Samaan, Mr. Youssef,3rd,Male,NA,Cherbourg
+50,FALSE,Arnold-Franchi, Mrs. Josef (Josefine Franchi),3rd,Female,18,Southampton
+51,FALSE,Panula, Master. Juha Niilo,3rd,Male,7,Southampton
+52,FALSE,Nosworthy, Mr. Richard Cater,3rd,Male,21,Southampton
+53,TRUE,Harper, Mrs. Henry Sleeper (Myna Haxtun),1st,Female,49,Cherbourg
+54,TRUE,Faunthorpe, Mrs. Lizzie (Elizabeth Anne Wilkinson),2nd,Female,29,Southampton
+55,FALSE,Ostby, Mr. Engelhart Cornelius,1st,Male,65,Cherbourg
+56,TRUE,Woolner, Mr. Hugh,1st,Male,NA,Southampton
+57,TRUE,Rugg, Miss. Emily,2nd,Female,21,Southampton
+58,FALSE,Novel, Mr. Mansouer,3rd,Male,28,Cherbourg
+59,TRUE,West, Miss. Constance Mirium,2nd,Female,5,Southampton
+60,FALSE,Goodwin, Master. William Frederick,3rd,Male,11,Southampton
+61,FALSE,Sirayanian, Mr. Orsen,3rd,Male,22,Cherbourg
+62,TRUE,Icard, Miss. Amelie,1st,Female,38,NA
+63,FALSE,Harris, Mr. Henry Birkhardt,1st,Male,45,Southampton
+64,FALSE,Skoog, Master. Harald,3rd,Male,4,Southampton
+65,FALSE,Stewart, Mr. Albert A,1st,Male,NA,Cherbourg
+66,TRUE,Moubarek, Master. Gerios,3rd,Male,NA,Cherbourg
+67,TRUE,Nye, Mrs. (Elizabeth Ramell),2nd,Female,29,Southampton
+68,FALSE,Crease, Mr. Ernest James,3rd,Male,19,Southampton
+69,TRUE,Andersson, Miss. Erna Alexandra,3rd,Female,17,Southampton
+70,FALSE,Kink, Mr. Vincenz,3rd,Male,26,Southampton
+71,FALSE,Jenkin, Mr. Stephen Curnow,2nd,Male,32,Southampton
+72,FALSE,Goodwin, Miss. Lillian Amy,3rd,Female,16,Southampton
+73,FALSE,Hood, Mr. Ambrose Jr,2nd,Male,21,Southampton
+74,FALSE,Chronopoulos, Mr. Apostolos,3rd,Male,26,Cherbourg
+75,TRUE,Bing, Mr. Lee,3rd,Male,32,Southampton
+76,FALSE,Moen, Mr. Sigurd Hansen,3rd,Male,25,Southampton
+77,FALSE,Staneff, Mr. Ivan,3rd,Male,NA,Southampton
+78,FALSE,Moutal, Mr. Rahamin Haim,3rd,Male,NA,Southampton
+79,TRUE,Caldwell, Master. Alden Gates,2nd,Male,0,Southampton
+80,TRUE,Dowdell, Miss. Elizabeth,3rd,Female,30,Southampton
+81,FALSE,Waelens, Mr. Achille,3rd,Male,22,Southampton
+82,TRUE,Sheerlinck, Mr. Jan Baptist,3rd,Male,29,Southampton
+83,TRUE,McDermott, Miss. Brigdet Delia,3rd,Female,NA,Queenstown
+84,FALSE,Carrau, Mr. Francisco M,1st,Male,28,Southampton
+85,TRUE,Ilett, Miss. Bertha,2nd,Female,17,Southampton
+86,TRUE,Backstrom, Mrs. Karl Alfred (Maria Mathilda Gustafsson),3rd,Female,33,Southampton
+87,FALSE,Ford, Mr. William Neal,3rd,Male,16,Southampton
+88,FALSE,Slocovski, Mr. Selman Francis,3rd,Male,NA,Southampton
+89,TRUE,Fortune, Miss. Mabel Helen,1st,Female,23,Southampton
+90,FALSE,Celotti, Mr. Francesco,3rd,Male,24,Southampton
+91,FALSE,Christmann, Mr. Emil,3rd,Male,29,Southampton
+92,FALSE,Andreasson, Mr. Paul Edvin,3rd,Male,20,Southampton
+93,FALSE,Chaffee, Mr. Herbert Fuller,1st,Male,46,Southampton
+94,FALSE,Dean, Mr. Bertram Frank,3rd,Male,26,Southampton
+95,FALSE,Coxon, Mr. Daniel,3rd,Male,59,Southampton
+96,FALSE,Shorney, Mr. Charles Joseph,3rd,Male,NA,Southampton
+97,FALSE,Goldschmidt, Mr. George B,1st,Male,71,Cherbourg
+98,TRUE,Greenfield, Mr. William Bertram,1st,Male,23,Cherbourg
+99,TRUE,Doling, Mrs. John T (Ada Julia Bone),2nd,Female,34,Southampton
+100,FALSE,Kantor, Mr. Sinai,2nd,Male,34,Southampton
+101,FALSE,Petranec, Miss. Matilda,3rd,Female,28,Southampton
+102,FALSE,Petroff," Mr. Pastcho (""Pentcho"")",3rd,Male,NA,Southampton
+103,FALSE,White, Mr. Richard Frasar,1st,Male,21,Southampton
+104,FALSE,Johansson, Mr. Gustaf Joel,3rd,Male,33,Southampton
+105,FALSE,Gustafsson, Mr. Anders Vilhelm,3rd,Male,37,Southampton
+106,FALSE,Mionoff, Mr. Stoytcho,3rd,Male,28,Southampton
+107,TRUE,Salkjelsvik, Miss. Anna Kristine,3rd,Female,21,Southampton
+108,TRUE,Moss, Mr. Albert Johan,3rd,Male,NA,Southampton
+109,FALSE,Rekic, Mr. Tido,3rd,Male,38,Southampton
+110,TRUE,Moran, Miss. Bertha,3rd,Female,NA,Queenstown
+111,FALSE,Porter, Mr. Walter Chamberlain,1st,Male,47,Southampton
+112,FALSE,Zabour, Miss. Hileni,3rd,Female,14,Cherbourg
+113,FALSE,Barton, Mr. David John,3rd,Male,22,Southampton
+114,FALSE,Jussila, Miss. Katriina,3rd,Female,20,Southampton
+115,FALSE,Attalah, Miss. Malake,3rd,Female,17,Cherbourg
+116,FALSE,Pekoniemi, Mr. Edvard,3rd,Male,21,Southampton
+117,FALSE,Connors, Mr. Patrick,3rd,Male,70,Queenstown
+118,FALSE,Turpin, Mr. William John Robert,2nd,Male,29,Southampton
+119,FALSE,Baxter, Mr. Quigg Edmond,1st,Male,24,Cherbourg
+120,FALSE,Andersson, Miss. Ellis Anna Maria,3rd,Female,2,Southampton
+121,FALSE,Hickman, Mr. Stanley George,2nd,Male,21,Southampton
+122,FALSE,Moore, Mr. Leonard Charles,3rd,Male,NA,Southampton
+123,FALSE,Nasser, Mr. Nicholas,2nd,Male,32,Cherbourg
+124,TRUE,Webber, Miss. Susan,2nd,Female,32,Southampton
+125,FALSE,White, Mr. Percival Wayland,1st,Male,54,Southampton
+126,TRUE,Nicola-Yarred, Master. Elias,3rd,Male,12,Cherbourg
+127,FALSE,McMahon, Mr. Martin,3rd,Male,NA,Queenstown
+128,TRUE,Madsen, Mr. Fridtjof Arne,3rd,Male,24,Southampton
+129,TRUE,Peter, Miss. Anna,3rd,Female,NA,Cherbourg
+130,FALSE,Ekstrom, Mr. Johan,3rd,Male,45,Southampton
+131,FALSE,Drazenoic, Mr. Jozef,3rd,Male,33,Cherbourg
+132,FALSE,Coelho, Mr. Domingos Fernandeo,3rd,Male,20,Southampton
+133,FALSE,Robins, Mrs. Alexander A (Grace Charity Laury),3rd,Female,47,Southampton
+134,TRUE,Weisz, Mrs. Leopold (Mathilde Francoise Pede),2nd,Female,29,Southampton
+135,FALSE,Sobey, Mr. Samuel James Hayden,2nd,Male,25,Southampton
+136,FALSE,Richard, Mr. Emile,2nd,Male,23,Cherbourg
+137,TRUE,Newsom, Miss. Helen Monypeny,1st,Female,19,Southampton
+138,FALSE,Futrelle, Mr. Jacques Heath,1st,Male,37,Southampton
+139,FALSE,Osen, Mr. Olaf Elon,3rd,Male,16,Southampton
+140,FALSE,Giglio, Mr. Victor,1st,Male,24,Cherbourg
+141,FALSE,Boulos, Mrs. Joseph (Sultana),3rd,Female,NA,Cherbourg
+142,TRUE,Nysten, Miss. Anna Sofia,3rd,Female,22,Southampton
+143,TRUE,Hakkarainen, Mrs. Pekka Pietari (Elin Matilda Dolck),3rd,Female,24,Southampton
+144,FALSE,Burke, Mr. Jeremiah,3rd,Male,19,Queenstown
+145,FALSE,Andrew, Mr. Edgardo Samuel,2nd,Male,18,Southampton
+146,FALSE,Nicholls, Mr. Joseph Charles,2nd,Male,19,Southampton
+147,TRUE,Andersson," Mr. August Edvard (""Wennerstrom"")",3rd,Male,27,Southampton
+148,FALSE,Ford," Miss. Robina Maggie ""Ruby""",3rd,Female,9,Southampton
+149,FALSE,Navratil," Mr. Michel (""Louis M Hoffman"")",2nd,Male,36,Southampton
+150,FALSE,Byles, Rev. Thomas Roussel Davids,2nd,Male,42,Southampton
+151,FALSE,Bateman, Rev. Robert James,2nd,Male,51,Southampton
+152,TRUE,Pears, Mrs. Thomas (Edith Wearne),1st,Female,22,Southampton
+153,FALSE,Meo, Mr. Alfonzo,3rd,Male,55,Southampton
+154,FALSE,van Billiard, Mr. Austin Blyler,3rd,Male,40,Southampton
+155,FALSE,Olsen, Mr. Ole Martin,3rd,Male,NA,Southampton
+156,FALSE,Williams, Mr. Charles Duane,1st,Male,51,Cherbourg
+157,TRUE,Gilnagh," Miss. Katherine ""Katie""",3rd,Female,16,Queenstown
+158,FALSE,Corn, Mr. Harry,3rd,Male,30,Southampton
+159,FALSE,Smiljanic, Mr. Mile,3rd,Male,NA,Southampton
+160,FALSE,Sage, Master. Thomas Henry,3rd,Male,NA,Southampton
+161,FALSE,Cribb, Mr. John Hatfield,3rd,Male,44,Southampton
+162,TRUE,Watt," Mrs. James (Elizabeth ""Bessie"" Inglis Milne)",2nd,Female,40,Southampton
+163,FALSE,Bengtsson, Mr. John Viktor,3rd,Male,26,Southampton
+164,FALSE,Calic, Mr. Jovo,3rd,Male,17,Southampton
+165,FALSE,Panula, Master. Eino Viljami,3rd,Male,1,Southampton
+166,TRUE,Goldsmith," Master. Frank John William ""Frankie""",3rd,Male,9,Southampton
+167,TRUE,Chibnall, Mrs. (Edith Martha Bowerman),1st,Female,NA,Southampton
+168,FALSE,Skoog, Mrs. William (Anna Bernhardina Karlsson),3rd,Female,45,Southampton
+169,FALSE,Baumann, Mr. John D,1st,Male,NA,Southampton
+170,FALSE,Ling, Mr. Lee,3rd,Male,28,Southampton
+171,FALSE,Van der hoef, Mr. Wyckoff,1st,Male,61,Southampton
+172,FALSE,Rice, Master. Arthur,3rd,Male,4,Queenstown
+173,TRUE,Johnson, Miss. Eleanor Ileen,3rd,Female,1,Southampton
+174,FALSE,Sivola, Mr. Antti Wilhelm,3rd,Male,21,Southampton
+175,FALSE,Smith, Mr. James Clinch,1st,Male,56,Cherbourg
+176,FALSE,Klasen, Mr. Klas Albin,3rd,Male,18,Southampton
+177,FALSE,Lefebre, Master. Henry Forbes,3rd,Male,NA,Southampton
+178,FALSE,Isham, Miss. Ann Elizabeth,1st,Female,50,Cherbourg
+179,FALSE,Hale, Mr. Reginald,2nd,Male,30,Southampton
+180,FALSE,Leonard, Mr. Lionel,3rd,Male,36,Southampton
+181,FALSE,Sage, Miss. Constance Gladys,3rd,Female,NA,Southampton
+182,FALSE,Pernot, Mr. Rene,2nd,Male,NA,Cherbourg
+183,FALSE,Asplund, Master. Clarence Gustaf Hugo,3rd,Male,9,Southampton
+184,TRUE,Becker, Master. Richard F,2nd,Male,1,Southampton
+185,TRUE,Kink-Heilmann, Miss. Luise Gretchen,3rd,Female,4,Southampton
+186,FALSE,Rood, Mr. Hugh Roscoe,1st,Male,NA,Southampton
+187,TRUE,O'Brien," Mrs. Thomas (Johanna ""Hannah"" Godfrey)",3rd,Female,NA,Queenstown
+188,TRUE,Romaine," Mr. Charles Hallace (""Mr C Rolmane"")",1st,Male,45,Southampton
+189,FALSE,Bourke, Mr. John,3rd,Male,40,Queenstown
+190,FALSE,Turcin, Mr. Stjepan,3rd,Male,36,Southampton
+191,TRUE,Pinsky, Mrs. (Rosa),2nd,Female,32,Southampton
+192,FALSE,Carbines, Mr. William,2nd,Male,19,Southampton
+193,TRUE,Andersen-Jensen, Miss. Carla Christine Nielsine,3rd,Female,19,Southampton
+194,TRUE,Navratil, Master. Michel M,2nd,Male,3,Southampton
+195,TRUE,Brown, Mrs. James Joseph (Margaret Tobin),1st,Female,44,Cherbourg
+196,TRUE,Lurette, Miss. Elise,1st,Female,58,Cherbourg
+197,FALSE,Mernagh, Mr. Robert,3rd,Male,NA,Queenstown
+198,FALSE,Olsen, Mr. Karl Siegwart Andreas,3rd,Male,42,Southampton
+199,TRUE,Madigan," Miss. Margaret ""Maggie""",3rd,Female,NA,Queenstown
+200,FALSE,Yrois," Miss. Henriette (""Mrs Harbeck"")",2nd,Female,24,Southampton
+201,FALSE,Vande Walle, Mr. Nestor Cyriel,3rd,Male,28,Southampton
+202,FALSE,Sage, Mr. Frederick,3rd,Male,NA,Southampton
+203,FALSE,Johanson, Mr. Jakob Alfred,3rd,Male,34,Southampton
+204,FALSE,Youseff, Mr. Gerious,3rd,Male,45,Cherbourg
+205,TRUE,Cohen," Mr. Gurshon ""Gus""",3rd,Male,18,Southampton
+206,FALSE,Strom, Miss. Telma Matilda,3rd,Female,2,Southampton
+207,FALSE,Backstrom, Mr. Karl Alfred,3rd,Male,32,Southampton
+208,TRUE,Albimona, Mr. Nassef Cassem,3rd,Male,26,Cherbourg
+209,TRUE,Carr," Miss. Helen ""Ellen""",3rd,Female,16,Queenstown
+210,TRUE,Blank, Mr. Henry,1st,Male,40,Cherbourg
+211,FALSE,Ali, Mr. Ahmed,3rd,Male,24,Southampton
+212,TRUE,Cameron, Miss. Clear Annie,2nd,Female,35,Southampton
+213,FALSE,Perkin, Mr. John Henry,3rd,Male,22,Southampton
+214,FALSE,Givard, Mr. Hans Kristensen,2nd,Male,30,Southampton
+215,FALSE,Kiernan, Mr. Philip,3rd,Male,NA,Queenstown
+216,TRUE,Newell, Miss. Madeleine,1st,Female,31,Cherbourg
+217,TRUE,Honkanen, Miss. Eliina,3rd,Female,27,Southampton
+218,FALSE,Jacobsohn, Mr. Sidney Samuel,2nd,Male,42,Southampton
+219,TRUE,Bazzani, Miss. Albina,1st,Female,32,Cherbourg
+220,FALSE,Harris, Mr. Walter,2nd,Male,30,Southampton
+221,TRUE,Sunderland, Mr. Victor Francis,3rd,Male,16,Southampton
+222,FALSE,Bracken, Mr. James H,2nd,Male,27,Southampton
+223,FALSE,Green, Mr. George Henry,3rd,Male,51,Southampton
+224,FALSE,Nenkoff, Mr. Christo,3rd,Male,NA,Southampton
+225,TRUE,Hoyt, Mr. Frederick Maxfield,1st,Male,38,Southampton
+226,FALSE,Berglund, Mr. Karl Ivar Sven,3rd,Male,22,Southampton
+227,TRUE,Mellors, Mr. William John,2nd,Male,19,Southampton
+228,FALSE,Lovell," Mr. John Hall (""Henry"")",3rd,Male,20,Southampton
+229,FALSE,Fahlstrom, Mr. Arne Jonas,2nd,Male,18,Southampton
+230,FALSE,Lefebre, Miss. Mathilde,3rd,Female,NA,Southampton
+231,TRUE,Harris, Mrs. Henry Birkhardt (Irene Wallach),1st,Female,35,Southampton
+232,FALSE,Larsson, Mr. Bengt Edvin,3rd,Male,29,Southampton
+233,FALSE,Sjostedt, Mr. Ernst Adolf,2nd,Male,59,Southampton
+234,TRUE,Asplund, Miss. Lillian Gertrud,3rd,Female,5,Southampton
+235,FALSE,Leyson, Mr. Robert William Norman,2nd,Male,24,Southampton
+236,FALSE,Harknett, Miss. Alice Phoebe,3rd,Female,NA,Southampton
+237,FALSE,Hold, Mr. Stephen,2nd,Male,44,Southampton
+238,TRUE,Collyer," Miss. Marjorie ""Lottie""",2nd,Female,8,Southampton
+239,FALSE,Pengelly, Mr. Frederick William,2nd,Male,19,Southampton
+240,FALSE,Hunt, Mr. George Henry,2nd,Male,33,Southampton
+241,FALSE,Zabour, Miss. Thamine,3rd,Female,NA,Cherbourg
+242,TRUE,Murphy," Miss. Katherine ""Kate""",3rd,Female,NA,Queenstown
+243,FALSE,Coleridge, Mr. Reginald Charles,2nd,Male,29,Southampton
+244,FALSE,Maenpaa, Mr. Matti Alexanteri,3rd,Male,22,Southampton
+245,FALSE,Attalah, Mr. Sleiman,3rd,Male,30,Cherbourg
+246,FALSE,Minahan, Dr. William Edward,1st,Male,44,Queenstown
+247,FALSE,Lindahl, Miss. Agda Thorilda Viktoria,3rd,Female,25,Southampton
+248,TRUE,Hamalainen, Mrs. William (Anna),2nd,Female,24,Southampton
+249,TRUE,Beckwith, Mr. Richard Leonard,1st,Male,37,Southampton
+250,FALSE,Carter, Rev. Ernest Courtenay,2nd,Male,54,Southampton
+251,FALSE,Reed, Mr. James George,3rd,Male,NA,Southampton
+252,FALSE,Strom, Mrs. Wilhelm (Elna Matilda Persson),3rd,Female,29,Southampton
+253,FALSE,Stead, Mr. William Thomas,1st,Male,62,Southampton
+254,FALSE,Lobb, Mr. William Arthur,3rd,Male,30,Southampton
+255,FALSE,Rosblom, Mrs. Viktor (Helena Wilhelmina),3rd,Female,41,Southampton
+256,TRUE,Touma, Mrs. Darwis (Hanne Youssef Razi),3rd,Female,29,Cherbourg
+257,TRUE,Thorne, Mrs. Gertrude Maybelle,1st,Female,NA,Cherbourg
+258,TRUE,Cherry, Miss. Gladys,1st,Female,30,Southampton
+259,TRUE,Ward, Miss. Anna,1st,Female,35,Cherbourg
+260,TRUE,Parrish, Mrs. (Lutie Davis),2nd,Female,50,Southampton
+261,FALSE,Smith, Mr. Thomas,3rd,Male,NA,Queenstown
+262,TRUE,Asplund, Master. Edvin Rojj Felix,3rd,Male,3,Southampton
+263,FALSE,Taussig, Mr. Emil,1st,Male,52,Southampton
+264,FALSE,Harrison, Mr. William,1st,Male,40,Southampton
+265,FALSE,Henry, Miss. Delia,3rd,Female,NA,Queenstown
+266,FALSE,Reeves, Mr. David,2nd,Male,36,Southampton
+267,FALSE,Panula, Mr. Ernesti Arvid,3rd,Male,16,Southampton
+268,TRUE,Persson, Mr. Ernst Ulrik,3rd,Male,25,Southampton
+269,TRUE,Graham, Mrs. William Thompson (Edith Junkins),1st,Female,58,Southampton
+270,TRUE,Bissette, Miss. Amelia,1st,Female,35,Southampton
+271,FALSE,Cairns, Mr. Alexander,1st,Male,NA,Southampton
+272,TRUE,Tornquist, Mr. William Henry,3rd,Male,25,Southampton
+273,TRUE,Mellinger, Mrs. (Elizabeth Anne Maidment),2nd,Female,41,Southampton
+274,FALSE,Natsch, Mr. Charles H,1st,Male,37,Cherbourg
+275,TRUE,Healy," Miss. Hanora ""Nora""",3rd,Female,NA,Queenstown
+276,TRUE,Andrews, Miss. Kornelia Theodosia,1st,Female,63,Southampton
+277,FALSE,Lindblom, Miss. Augusta Charlotta,3rd,Female,45,Southampton
+278,FALSE,Parkes," Mr. Francis ""Frank""",2nd,Male,NA,Southampton
+279,FALSE,Rice, Master. Eric,3rd,Male,7,Queenstown
+280,TRUE,Abbott, Mrs. Stanton (Rosa Hunt),3rd,Female,35,Southampton
+281,FALSE,Duane, Mr. Frank,3rd,Male,65,Queenstown
+282,FALSE,Olsson, Mr. Nils Johan Goransson,3rd,Male,28,Southampton
+283,FALSE,de Pelsmaeker, Mr. Alfons,3rd,Male,16,Southampton
+284,TRUE,Dorking, Mr. Edward Arthur,3rd,Male,19,Southampton
+285,FALSE,Smith, Mr. Richard William,1st,Male,NA,Southampton
+286,FALSE,Stankovic, Mr. Ivan,3rd,Male,33,Cherbourg
+287,TRUE,de Mulder, Mr. Theodore,3rd,Male,30,Southampton
+288,FALSE,Naidenoff, Mr. Penko,3rd,Male,22,Southampton
+289,TRUE,Hosono, Mr. Masabumi,2nd,Male,42,Southampton
+290,TRUE,Connolly, Miss. Kate,3rd,Female,22,Queenstown
+291,TRUE,Barber," Miss. Ellen ""Nellie""",1st,Female,26,Southampton
+292,TRUE,Bishop, Mrs. Dickinson H (Helen Walton),1st,Female,19,Cherbourg
+293,FALSE,Levy, Mr. Rene Jacques,2nd,Male,36,Cherbourg
+294,FALSE,Haas, Miss. Aloisia,3rd,Female,24,Southampton
+295,FALSE,Mineff, Mr. Ivan,3rd,Male,24,Southampton
+296,FALSE,Lewy, Mr. Ervin G,1st,Male,NA,Cherbourg
+297,FALSE,Hanna, Mr. Mansour,3rd,Male,23,Cherbourg
+298,FALSE,Allison, Miss. Helen Loraine,1st,Female,2,Southampton
+299,TRUE,Saalfeld, Mr. Adolphe,1st,Male,NA,Southampton
+300,TRUE,Baxter, Mrs. James (Helene DeLaudeniere Chaput),1st,Female,50,Cherbourg
+301,TRUE,Kelly," Miss. Anna Katherine ""Annie Kate""",3rd,Female,NA,Queenstown
+302,TRUE,McCoy, Mr. Bernard,3rd,Male,NA,Queenstown
+303,FALSE,Johnson, Mr. William Cahoone Jr,3rd,Male,19,Southampton
+304,TRUE,Keane, Miss. Nora A,2nd,Female,NA,Queenstown
+305,FALSE,Williams," Mr. Howard Hugh ""Harry""",3rd,Male,NA,Southampton
+306,TRUE,Allison, Master. Hudson Trevor,1st,Male,0,Southampton
+307,TRUE,Fleming, Miss. Margaret,1st,Female,NA,Cherbourg
+308,TRUE,Penasco y Castellana, Mrs. Victor de Satode (Maria Josefa Perez de Soto y Vallejo),1st,Female,17,Cherbourg
+309,FALSE,Abelson, Mr. Samuel,2nd,Male,30,Cherbourg
+310,TRUE,Francatelli, Miss. Laura Mabel,1st,Female,30,Cherbourg
+311,TRUE,Hays, Miss. Margaret Bechstein,1st,Female,24,Cherbourg
+312,TRUE,Ryerson, Miss. Emily Borie,1st,Female,18,Cherbourg
+313,FALSE,Lahtinen, Mrs. William (Anna Sylfven),2nd,Female,26,Southampton
+314,FALSE,Hendekovic, Mr. Ignjac,3rd,Male,28,Southampton
+315,FALSE,Hart, Mr. Benjamin,2nd,Male,43,Southampton
+316,TRUE,Nilsson, Miss. Helmina Josefina,3rd,Female,26,Southampton
+317,TRUE,Kantor, Mrs. Sinai (Miriam Sternin),2nd,Female,24,Southampton
+318,FALSE,Moraweck, Dr. Ernest,2nd,Male,54,Southampton
+319,TRUE,Wick, Miss. Mary Natalie,1st,Female,31,Southampton
+320,TRUE,Spedden, Mrs. Frederic Oakley (Margaretta Corning Stone),1st,Female,40,Cherbourg
+321,FALSE,Dennis, Mr. Samuel,3rd,Male,22,Southampton
+322,FALSE,Danoff, Mr. Yoto,3rd,Male,27,Southampton
+323,TRUE,Slayter, Miss. Hilda Mary,2nd,Female,30,Queenstown
+324,TRUE,Caldwell, Mrs. Albert Francis (Sylvia Mae Harbaugh),2nd,Female,22,Southampton
+325,FALSE,Sage, Mr. George John Jr,3rd,Male,NA,Southampton
+326,TRUE,Young, Miss. Marie Grice,1st,Female,36,Cherbourg
+327,FALSE,Nysveen, Mr. Johan Hansen,3rd,Male,61,Southampton
+328,TRUE,Ball, Mrs. (Ada E Hall),2nd,Female,36,Southampton
+329,TRUE,Goldsmith, Mrs. Frank John (Emily Alice Brown),3rd,Female,31,Southampton
+330,TRUE,Hippach, Miss. Jean Gertrude,1st,Female,16,Cherbourg
+331,TRUE,McCoy, Miss. Agnes,3rd,Female,NA,Queenstown
+332,FALSE,Partner, Mr. Austen,1st,Male,45,Southampton
+333,FALSE,Graham, Mr. George Edward,1st,Male,38,Southampton
+334,FALSE,Vander Planke, Mr. Leo Edmondus,3rd,Male,16,Southampton
+335,TRUE,Frauenthal, Mrs. Henry William (Clara Heinsheimer),1st,Female,NA,Southampton
+336,FALSE,Denkoff, Mr. Mitto,3rd,Male,NA,Southampton
+337,FALSE,Pears, Mr. Thomas Clinton,1st,Male,29,Southampton
+338,TRUE,Burns, Miss. Elizabeth Margaret,1st,Female,41,Cherbourg
+339,TRUE,Dahl, Mr. Karl Edwart,3rd,Male,45,Southampton
+340,FALSE,Blackwell, Mr. Stephen Weart,1st,Male,45,Southampton
+341,TRUE,Navratil, Master. Edmond Roger,2nd,Male,2,Southampton
+342,TRUE,Fortune, Miss. Alice Elizabeth,1st,Female,24,Southampton
+343,FALSE,Collander, Mr. Erik Gustaf,2nd,Male,28,Southampton
+344,FALSE,Sedgwick, Mr. Charles Frederick Waddington,2nd,Male,25,Southampton
+345,FALSE,Fox, Mr. Stanley Hubert,2nd,Male,36,Southampton
+346,TRUE,Brown," Miss. Amelia ""Mildred""",2nd,Female,24,Southampton
+347,TRUE,Smith, Miss. Marion Elsie,2nd,Female,40,Southampton
+348,TRUE,Davison, Mrs. Thomas Henry (Mary E Finck),3rd,Female,NA,Southampton
+349,TRUE,Coutts," Master. William Loch ""William""",3rd,Male,3,Southampton
+350,FALSE,Dimic, Mr. Jovan,3rd,Male,42,Southampton
+351,FALSE,Odahl, Mr. Nils Martin,3rd,Male,23,Southampton
+352,FALSE,Williams-Lambert, Mr. Fletcher Fellows,1st,Male,NA,Southampton
+353,FALSE,Elias, Mr. Tannous,3rd,Male,15,Cherbourg
+354,FALSE,Arnold-Franchi, Mr. Josef,3rd,Male,25,Southampton
+355,FALSE,Yousif, Mr. Wazli,3rd,Male,NA,Cherbourg
+356,FALSE,Vanden Steen, Mr. Leo Peter,3rd,Male,28,Southampton
+357,TRUE,Bowerman, Miss. Elsie Edith,1st,Female,22,Southampton
+358,FALSE,Funk, Miss. Annie Clemmer,2nd,Female,38,Southampton
+359,TRUE,McGovern, Miss. Mary,3rd,Female,NA,Queenstown
+360,TRUE,Mockler," Miss. Helen Mary ""Ellie""",3rd,Female,NA,Queenstown
+361,FALSE,Skoog, Mr. Wilhelm,3rd,Male,40,Southampton
+362,FALSE,del Carlo, Mr. Sebastiano,2nd,Male,29,Cherbourg
+363,FALSE,Barbara, Mrs. (Catherine David),3rd,Female,45,Cherbourg
+364,FALSE,Asim, Mr. Adola,3rd,Male,35,Southampton
+365,FALSE,O'Brien, Mr. Thomas,3rd,Male,NA,Queenstown
+366,FALSE,Adahl, Mr. Mauritz Nils Martin,3rd,Male,30,Southampton
+367,TRUE,Warren, Mrs. Frank Manley (Anna Sophia Atkinson),1st,Female,60,Cherbourg
+368,TRUE,Moussa, Mrs. (Mantoura Boulos),3rd,Female,NA,Cherbourg
+369,TRUE,Jermyn, Miss. Annie,3rd,Female,NA,Queenstown
+370,TRUE,Aubart, Mme. Leontine Pauline,1st,Female,24,Cherbourg
+371,TRUE,Harder, Mr. George Achilles,1st,Male,25,Cherbourg
+372,FALSE,Wiklund, Mr. Jakob Alfred,3rd,Male,18,Southampton
+373,FALSE,Beavan, Mr. William Thomas,3rd,Male,19,Southampton
+374,FALSE,Ringhini, Mr. Sante,1st,Male,22,Cherbourg
+375,FALSE,Palsson, Miss. Stina Viola,3rd,Female,3,Southampton
+376,TRUE,Meyer, Mrs. Edgar Joseph (Leila Saks),1st,Female,NA,Cherbourg
+377,TRUE,Landergren, Miss. Aurora Adelia,3rd,Female,22,Southampton
+378,FALSE,Widener, Mr. Harry Elkins,1st,Male,27,Cherbourg
+379,FALSE,Betros, Mr. Tannous,3rd,Male,20,Cherbourg
+380,FALSE,Gustafsson, Mr. Karl Gideon,3rd,Male,19,Southampton
+381,TRUE,Bidois, Miss. Rosalie,1st,Female,42,Cherbourg
+382,TRUE,Nakid," Miss. Maria (""Mary"")",3rd,Female,1,Cherbourg
+383,FALSE,Tikkanen, Mr. Juho,3rd,Male,32,Southampton
+384,TRUE,Holverson, Mrs. Alexander Oskar (Mary Aline Towner),1st,Female,35,Southampton
+385,FALSE,Plotcharsky, Mr. Vasil,3rd,Male,NA,Southampton
+386,FALSE,Davies, Mr. Charles Henry,2nd,Male,18,Southampton
+387,FALSE,Goodwin, Master. Sidney Leonard,3rd,Male,1,Southampton
+388,TRUE,Buss, Miss. Kate,2nd,Female,36,Southampton
+389,FALSE,Sadlier, Mr. Matthew,3rd,Male,NA,Queenstown
+390,TRUE,Lehmann, Miss. Bertha,2nd,Female,17,Cherbourg
+391,TRUE,Carter, Mr. William Ernest,1st,Male,36,Southampton
+392,TRUE,Jansson, Mr. Carl Olof,3rd,Male,21,Southampton
+393,FALSE,Gustafsson, Mr. Johan Birger,3rd,Male,28,Southampton
+394,TRUE,Newell, Miss. Marjorie,1st,Female,23,Cherbourg
+395,TRUE,Sandstrom, Mrs. Hjalmar (Agnes Charlotta Bengtsson),3rd,Female,24,Southampton
+396,FALSE,Johansson, Mr. Erik,3rd,Male,22,Southampton
+397,FALSE,Olsson, Miss. Elina,3rd,Female,31,Southampton
+398,FALSE,McKane, Mr. Peter David,2nd,Male,46,Southampton
+399,FALSE,Pain, Dr. Alfred,2nd,Male,23,Southampton
+400,TRUE,Trout, Mrs. William H (Jessie L),2nd,Female,28,Southampton
+401,TRUE,Niskanen, Mr. Juha,3rd,Male,39,Southampton
+402,FALSE,Adams, Mr. John,3rd,Male,26,Southampton
+403,FALSE,Jussila, Miss. Mari Aina,3rd,Female,21,Southampton
+404,FALSE,Hakkarainen, Mr. Pekka Pietari,3rd,Male,28,Southampton
+405,FALSE,Oreskovic, Miss. Marija,3rd,Female,20,Southampton
+406,FALSE,Gale, Mr. Shadrach,2nd,Male,34,Southampton
+407,FALSE,Widegren, Mr. Carl/Charles Peter,3rd,Male,51,Southampton
+408,TRUE,Richards, Master. William Rowe,2nd,Male,3,Southampton
+409,FALSE,Birkeland, Mr. Hans Martin Monsen,3rd,Male,21,Southampton
+410,FALSE,Lefebre, Miss. Ida,3rd,Female,NA,Southampton
+411,FALSE,Sdycoff, Mr. Todor,3rd,Male,NA,Southampton
+412,FALSE,Hart, Mr. Henry,3rd,Male,NA,Queenstown
+413,TRUE,Minahan, Miss. Daisy E,1st,Female,33,Queenstown
+414,FALSE,Cunningham, Mr. Alfred Fleming,2nd,Male,NA,Southampton
+415,TRUE,Sundman, Mr. Johan Julian,3rd,Male,44,Southampton
+416,FALSE,Meek, Mrs. Thomas (Annie Louise Rowley),3rd,Female,NA,Southampton
+417,TRUE,Drew, Mrs. James Vivian (Lulu Thorne Christian),2nd,Female,34,Southampton
+418,TRUE,Silven, Miss. Lyyli Karoliina,2nd,Female,18,Southampton
+419,FALSE,Matthews, Mr. William John,2nd,Male,30,Southampton
+420,FALSE,Van Impe, Miss. Catharina,3rd,Female,10,Southampton
+421,FALSE,Gheorgheff, Mr. Stanio,3rd,Male,NA,Cherbourg
+422,FALSE,Charters, Mr. David,3rd,Male,21,Queenstown
+423,FALSE,Zimmerman, Mr. Leo,3rd,Male,29,Southampton
+424,FALSE,Danbom, Mrs. Ernst Gilbert (Anna Sigrid Maria Brogren),3rd,Female,28,Southampton
+425,FALSE,Rosblom, Mr. Viktor Richard,3rd,Male,18,Southampton
+426,FALSE,Wiseman, Mr. Phillippe,3rd,Male,NA,Southampton
+427,TRUE,Clarke, Mrs. Charles V (Ada Maria Winfield),2nd,Female,28,Southampton
+428,TRUE,Phillips," Miss. Kate Florence (""Mrs Kate Louise Phillips Marshall"")",2nd,Female,19,Southampton
+429,FALSE,Flynn, Mr. James,3rd,Male,NA,Queenstown
+430,TRUE,Pickard, Mr. Berk (Berk Trembisky),3rd,Male,32,Southampton
+431,TRUE,Bjornstrom-Steffansson, Mr. Mauritz Hakan,1st,Male,28,Southampton
+432,TRUE,Thorneycroft, Mrs. Percival (Florence Kate White),3rd,Female,NA,Southampton
+433,TRUE,Louch, Mrs. Charles Alexander (Alice Adelaide Slow),2nd,Female,42,Southampton
+434,FALSE,Kallio, Mr. Nikolai Erland,3rd,Male,17,Southampton
+435,FALSE,Silvey, Mr. William Baird,1st,Male,50,Southampton
+436,TRUE,Carter, Miss. Lucile Polk,1st,Female,14,Southampton
+437,FALSE,Ford," Miss. Doolina Margaret ""Daisy""",3rd,Female,21,Southampton
+438,TRUE,Richards, Mrs. Sidney (Emily Hocking),2nd,Female,24,Southampton
+439,FALSE,Fortune, Mr. Mark,1st,Male,64,Southampton
+440,FALSE,Kvillner, Mr. Johan Henrik Johannesson,2nd,Male,31,Southampton
+441,TRUE,Hart, Mrs. Benjamin (Esther Ada Bloomfield),2nd,Female,45,Southampton
+442,FALSE,Hampe, Mr. Leon,3rd,Male,20,Southampton
+443,FALSE,Petterson, Mr. Johan Emil,3rd,Male,25,Southampton
+444,TRUE,Reynaldo, Ms. Encarnacion,2nd,Female,28,Southampton
+445,TRUE,Johannesen-Bratthammer, Mr. Bernt,3rd,Male,NA,Southampton
+446,TRUE,Dodge, Master. Washington,1st,Male,4,Southampton
+447,TRUE,Mellinger, Miss. Madeleine Violet,2nd,Female,13,Southampton
+448,TRUE,Seward, Mr. Frederic Kimber,1st,Male,34,Southampton
+449,TRUE,Baclini, Miss. Marie Catherine,3rd,Female,5,Cherbourg
+450,TRUE,Peuchen, Major. Arthur Godfrey,1st,Male,52,Southampton
+451,FALSE,West, Mr. Edwy Arthur,2nd,Male,36,Southampton
+452,FALSE,Hagland, Mr. Ingvald Olai Olsen,3rd,Male,NA,Southampton
+453,FALSE,Foreman, Mr. Benjamin Laventall,1st,Male,30,Cherbourg
+454,TRUE,Goldenberg, Mr. Samuel L,1st,Male,49,Cherbourg
+455,FALSE,Peduzzi, Mr. Joseph,3rd,Male,NA,Southampton
+456,TRUE,Jalsevac, Mr. Ivan,3rd,Male,29,Cherbourg
+457,FALSE,Millet, Mr. Francis Davis,1st,Male,65,Southampton
+458,TRUE,Kenyon, Mrs. Frederick R (Marion),1st,Female,NA,Southampton
+459,TRUE,Toomey, Miss. Ellen,2nd,Female,50,Southampton
+460,FALSE,O'Connor, Mr. Maurice,3rd,Male,NA,Queenstown
+461,TRUE,Anderson, Mr. Harry,1st,Male,48,Southampton
+462,FALSE,Morley, Mr. William,3rd,Male,34,Southampton
+463,FALSE,Gee, Mr. Arthur H,1st,Male,47,Southampton
+464,FALSE,Milling, Mr. Jacob Christian,2nd,Male,48,Southampton
+465,FALSE,Maisner, Mr. Simon,3rd,Male,NA,Southampton
+466,FALSE,Goncalves, Mr. Manuel Estanslas,3rd,Male,38,Southampton
+467,FALSE,Campbell, Mr. William,2nd,Male,NA,Southampton
+468,FALSE,Smart, Mr. John Montgomery,1st,Male,56,Southampton
+469,FALSE,Scanlan, Mr. James,3rd,Male,NA,Queenstown
+470,TRUE,Baclini, Miss. Helene Barbara,3rd,Female,0,Cherbourg
+471,FALSE,Keefe, Mr. Arthur,3rd,Male,NA,Southampton
+472,FALSE,Cacic, Mr. Luka,3rd,Male,38,Southampton
+473,TRUE,West, Mrs. Edwy Arthur (Ada Mary Worth),2nd,Female,33,Southampton
+474,TRUE,Jerwan, Mrs. Amin S (Marie Marthe Thuillard),2nd,Female,23,Cherbourg
+475,FALSE,Strandberg, Miss. Ida Sofia,3rd,Female,22,Southampton
+476,FALSE,Clifford, Mr. George Quincy,1st,Male,NA,Southampton
+477,FALSE,Renouf, Mr. Peter Henry,2nd,Male,34,Southampton
+478,FALSE,Braund, Mr. Lewis Richard,3rd,Male,29,Southampton
+479,FALSE,Karlsson, Mr. Nils August,3rd,Male,22,Southampton
+480,TRUE,Hirvonen, Miss. Hildur E,3rd,Female,2,Southampton
+481,FALSE,Goodwin, Master. Harold Victor,3rd,Male,9,Southampton
+482,FALSE,Frost," Mr. Anthony Wood ""Archie""",2nd,Male,NA,Southampton
+483,FALSE,Rouse, Mr. Richard Henry,3rd,Male,50,Southampton
+484,TRUE,Turkula, Mrs. (Hedwig),3rd,Female,63,Southampton
+485,TRUE,Bishop, Mr. Dickinson H,1st,Male,25,Cherbourg
+486,FALSE,Lefebre, Miss. Jeannie,3rd,Female,NA,Southampton
+487,TRUE,Hoyt, Mrs. Frederick Maxfield (Jane Anne Forby),1st,Female,35,Southampton
+488,FALSE,Kent, Mr. Edward Austin,1st,Male,58,Cherbourg
+489,FALSE,Somerton, Mr. Francis William,3rd,Male,30,Southampton
+490,TRUE,Coutts," Master. Eden Leslie ""Neville""",3rd,Male,9,Southampton
+491,FALSE,Hagland, Mr. Konrad Mathias Reiersen,3rd,Male,NA,Southampton
+492,FALSE,Windelov, Mr. Einar,3rd,Male,21,Southampton
+493,FALSE,Molson, Mr. Harry Markland,1st,Male,55,Southampton
+494,FALSE,Artagaveytia, Mr. Ramon,1st,Male,71,Cherbourg
+495,FALSE,Stanley, Mr. Edward Roland,3rd,Male,21,Southampton
+496,FALSE,Yousseff, Mr. Gerious,3rd,Male,NA,Cherbourg
+497,TRUE,Eustis, Miss. Elizabeth Mussey,1st,Female,54,Cherbourg
+498,FALSE,Shellard, Mr. Frederick William,3rd,Male,NA,Southampton
+499,FALSE,Allison, Mrs. Hudson J C (Bessie Waldo Daniels),1st,Female,25,Southampton
+500,FALSE,Svensson, Mr. Olof,3rd,Male,24,Southampton
+501,FALSE,Calic, Mr. Petar,3rd,Male,17,Southampton
+502,FALSE,Canavan, Miss. Mary,3rd,Female,21,Queenstown
+503,FALSE,O'Sullivan, Miss. Bridget Mary,3rd,Female,NA,Queenstown
+504,FALSE,Laitinen, Miss. Kristina Sofia,3rd,Female,37,Southampton
+505,TRUE,Maioni, Miss. Roberta,1st,Female,16,Southampton
+506,FALSE,Penasco y Castellana, Mr. Victor de Satode,1st,Male,18,Cherbourg
+507,TRUE,Quick, Mrs. Frederick Charles (Jane Richards),2nd,Female,33,Southampton
+508,TRUE,Bradley," Mr. George (""George Arthur Brayton"")",1st,Male,NA,Southampton
+509,FALSE,Olsen, Mr. Henry Margido,3rd,Male,28,Southampton
+510,TRUE,Lang, Mr. Fang,3rd,Male,26,Southampton
+511,TRUE,Daly, Mr. Eugene Patrick,3rd,Male,29,Queenstown
+512,FALSE,Webber, Mr. James,3rd,Male,NA,Southampton
+513,TRUE,McGough, Mr. James Robert,1st,Male,36,Southampton
+514,TRUE,Rothschild, Mrs. Martin (Elizabeth L. Barrett),1st,Female,54,Cherbourg
+515,FALSE,Coleff, Mr. Satio,3rd,Male,24,Southampton
+516,FALSE,Walker, Mr. William Anderson,1st,Male,47,Southampton
+517,TRUE,Lemore, Mrs. (Amelia Milley),2nd,Female,34,Southampton
+518,FALSE,Ryan, Mr. Patrick,3rd,Male,NA,Queenstown
+519,TRUE,Angle," Mrs. William A (Florence ""Mary"" Agnes Hughes)",2nd,Female,36,Southampton
+520,FALSE,Pavlovic, Mr. Stefo,3rd,Male,32,Southampton
+521,TRUE,Perreault, Miss. Anne,1st,Female,30,Southampton
+522,FALSE,Vovk, Mr. Janko,3rd,Male,22,Southampton
+523,FALSE,Lahoud, Mr. Sarkis,3rd,Male,NA,Cherbourg
+524,TRUE,Hippach, Mrs. Louis Albert (Ida Sophia Fischer),1st,Female,44,Cherbourg
+525,FALSE,Kassem, Mr. Fared,3rd,Male,NA,Cherbourg
+526,FALSE,Farrell, Mr. James,3rd,Male,40,Queenstown
+527,TRUE,Ridsdale, Miss. Lucy,2nd,Female,50,Southampton
+528,FALSE,Farthing, Mr. John,1st,Male,NA,Southampton
+529,FALSE,Salonen, Mr. Johan Werner,3rd,Male,39,Southampton
+530,FALSE,Hocking, Mr. Richard George,2nd,Male,23,Southampton
+531,TRUE,Quick, Miss. Phyllis May,2nd,Female,2,Southampton
+532,FALSE,Toufik, Mr. Nakli,3rd,Male,NA,Cherbourg
+533,FALSE,Elias, Mr. Joseph Jr,3rd,Male,17,Cherbourg
+534,TRUE,Peter, Mrs. Catherine (Catherine Rizk),3rd,Female,NA,Cherbourg
+535,FALSE,Cacic, Miss. Marija,3rd,Female,30,Southampton
+536,TRUE,Hart, Miss. Eva Miriam,2nd,Female,7,Southampton
+537,FALSE,Butt, Major. Archibald Willingham,1st,Male,45,Southampton
+538,TRUE,LeRoy, Miss. Bertha,1st,Female,30,Cherbourg
+539,FALSE,Risien, Mr. Samuel Beard,3rd,Male,NA,Southampton
+540,TRUE,Frolicher, Miss. Hedwig Margaritha,1st,Female,22,Cherbourg
+541,TRUE,Crosby, Miss. Harriet R,1st,Female,36,Southampton
+542,FALSE,Andersson, Miss. Ingeborg Constanzia,3rd,Female,9,Southampton
+543,FALSE,Andersson, Miss. Sigrid Elisabeth,3rd,Female,11,Southampton
+544,TRUE,Beane, Mr. Edward,2nd,Male,32,Southampton
+545,FALSE,Douglas, Mr. Walter Donald,1st,Male,50,Cherbourg
+546,FALSE,Nicholson, Mr. Arthur Ernest,1st,Male,64,Southampton
+547,TRUE,Beane, Mrs. Edward (Ethel Clarke),2nd,Female,19,Southampton
+548,TRUE,Padro y Manent, Mr. Julian,2nd,Male,NA,Cherbourg
+549,FALSE,Goldsmith, Mr. Frank John,3rd,Male,33,Southampton
+550,TRUE,Davies, Master. John Morgan Jr,2nd,Male,8,Southampton
+551,TRUE,Thayer, Mr. John Borland Jr,1st,Male,17,Cherbourg
+552,FALSE,Sharp, Mr. Percival James R,2nd,Male,27,Southampton
+553,FALSE,O'Brien, Mr. Timothy,3rd,Male,NA,Queenstown
+554,TRUE,Leeni," Mr. Fahim (""Philip Zenni"")",3rd,Male,22,Cherbourg
+555,TRUE,Ohman, Miss. Velin,3rd,Female,22,Southampton
+556,FALSE,Wright, Mr. George,1st,Male,62,Southampton
+557,TRUE,Duff Gordon," Lady. (Lucille Christiana Sutherland) (""Mrs Morgan"")",1st,Female,48,Cherbourg
+558,FALSE,Robbins, Mr. Victor,1st,Male,NA,Cherbourg
+559,TRUE,Taussig, Mrs. Emil (Tillie Mandelbaum),1st,Female,39,Southampton
+560,TRUE,de Messemaeker, Mrs. Guillaume Joseph (Emma),3rd,Female,36,Southampton
+561,FALSE,Morrow, Mr. Thomas Rowan,3rd,Male,NA,Queenstown
+562,FALSE,Sivic, Mr. Husein,3rd,Male,40,Southampton
+563,FALSE,Norman, Mr. Robert Douglas,2nd,Male,28,Southampton
+564,FALSE,Simmons, Mr. John,3rd,Male,NA,Southampton
+565,FALSE,Meanwell, Miss. (Marion Ogden),3rd,Female,NA,Southampton
+566,FALSE,Davies, Mr. Alfred J,3rd,Male,24,Southampton
+567,FALSE,Stoytcheff, Mr. Ilia,3rd,Male,19,Southampton
+568,FALSE,Palsson, Mrs. Nils (Alma Cornelia Berglund),3rd,Female,29,Southampton
+569,FALSE,Doharr, Mr. Tannous,3rd,Male,NA,Cherbourg
+570,TRUE,Jonsson, Mr. Carl,3rd,Male,32,Southampton
+571,TRUE,Harris, Mr. George,2nd,Male,62,Southampton
+572,TRUE,Appleton, Mrs. Edward Dale (Charlotte Lamson),1st,Female,53,Southampton
+573,TRUE,Flynn," Mr. John Irwin (""Irving"")",1st,Male,36,Southampton
+574,TRUE,Kelly, Miss. Mary,3rd,Female,NA,Queenstown
+575,FALSE,Rush, Mr. Alfred George John,3rd,Male,16,Southampton
+576,FALSE,Patchett, Mr. George,3rd,Male,19,Southampton
+577,TRUE,Garside, Miss. Ethel,2nd,Female,34,Southampton
+578,TRUE,Silvey, Mrs. William Baird (Alice Munger),1st,Female,39,Southampton
+579,FALSE,Caram, Mrs. Joseph (Maria Elias),3rd,Female,NA,Cherbourg
+580,TRUE,Jussila, Mr. Eiriik,3rd,Male,32,Southampton
+581,TRUE,Christy, Miss. Julie Rachel,2nd,Female,25,Southampton
+582,TRUE,Thayer, Mrs. John Borland (Marian Longstreth Morris),1st,Female,39,Cherbourg
+583,FALSE,Downton, Mr. William James,2nd,Male,54,Southampton
+584,FALSE,Ross, Mr. John Hugo,1st,Male,36,Cherbourg
+585,FALSE,Paulner, Mr. Uscher,3rd,Male,NA,Cherbourg
+586,TRUE,Taussig, Miss. Ruth,1st,Female,18,Southampton
+587,FALSE,Jarvis, Mr. John Denzil,2nd,Male,47,Southampton
+588,TRUE,Frolicher-Stehli, Mr. Maxmillian,1st,Male,60,Cherbourg
+589,FALSE,Gilinski, Mr. Eliezer,3rd,Male,22,Southampton
+590,FALSE,Murdlin, Mr. Joseph,3rd,Male,NA,Southampton
+591,FALSE,Rintamaki, Mr. Matti,3rd,Male,35,Southampton
+592,TRUE,Stephenson, Mrs. Walter Bertram (Martha Eustis),1st,Female,52,Cherbourg
+593,FALSE,Elsbury, Mr. William James,3rd,Male,47,Southampton
+594,FALSE,Bourke, Miss. Mary,3rd,Female,NA,Queenstown
+595,FALSE,Chapman, Mr. John Henry,2nd,Male,37,Southampton
+596,FALSE,Van Impe, Mr. Jean Baptiste,3rd,Male,36,Southampton
+597,TRUE,Leitch, Miss. Jessie Wills,2nd,Female,NA,Southampton
+598,FALSE,Johnson, Mr. Alfred,3rd,Male,49,Southampton
+599,FALSE,Boulos, Mr. Hanna,3rd,Male,NA,Cherbourg
+600,TRUE,Duff Gordon," Sir. Cosmo Edmund (""Mr Morgan"")",1st,Male,49,Cherbourg
+601,TRUE,Jacobsohn, Mrs. Sidney Samuel (Amy Frances Christy),2nd,Female,24,Southampton
+602,FALSE,Slabenoff, Mr. Petco,3rd,Male,NA,Southampton
+603,FALSE,Harrington, Mr. Charles H,1st,Male,NA,Southampton
+604,FALSE,Torber, Mr. Ernst William,3rd,Male,44,Southampton
+605,TRUE,Homer," Mr. Harry (""Mr E Haven"")",1st,Male,35,Cherbourg
+606,FALSE,Lindell, Mr. Edvard Bengtsson,3rd,Male,36,Southampton
+607,FALSE,Karaic, Mr. Milan,3rd,Male,30,Southampton
+608,TRUE,Daniel, Mr. Robert Williams,1st,Male,27,Southampton
+609,TRUE,Laroche, Mrs. Joseph (Juliette Marie Louise Lafargue),2nd,Female,22,Cherbourg
+610,TRUE,Shutes, Miss. Elizabeth W,1st,Female,40,Southampton
+611,FALSE,Andersson, Mrs. Anders Johan (Alfrida Konstantia Brogren),3rd,Female,39,Southampton
+612,FALSE,Jardin, Mr. Jose Neto,3rd,Male,NA,Southampton
+613,TRUE,Murphy, Miss. Margaret Jane,3rd,Female,NA,Queenstown
+614,FALSE,Horgan, Mr. John,3rd,Male,NA,Queenstown
+615,FALSE,Brocklebank, Mr. William Alfred,3rd,Male,35,Southampton
+616,TRUE,Herman, Miss. Alice,2nd,Female,24,Southampton
+617,FALSE,Danbom, Mr. Ernst Gilbert,3rd,Male,34,Southampton
+618,FALSE,Lobb, Mrs. William Arthur (Cordelia K Stanlick),3rd,Female,26,Southampton
+619,TRUE,Becker, Miss. Marion Louise,2nd,Female,4,Southampton
+620,FALSE,Gavey, Mr. Lawrence,2nd,Male,26,Southampton
+621,FALSE,Yasbeck, Mr. Antoni,3rd,Male,27,Cherbourg
+622,TRUE,Kimball, Mr. Edwin Nelson Jr,1st,Male,42,Southampton
+623,TRUE,Nakid, Mr. Sahid,3rd,Male,20,Cherbourg
+624,FALSE,Hansen, Mr. Henry Damsgaard,3rd,Male,21,Southampton
+625,FALSE,Bowen," Mr. David John ""Dai""",3rd,Male,21,Southampton
+626,FALSE,Sutton, Mr. Frederick,1st,Male,61,Southampton
+627,FALSE,Kirkland, Rev. Charles Leonard,2nd,Male,57,Queenstown
+628,TRUE,Longley, Miss. Gretchen Fiske,1st,Female,21,Southampton
+629,FALSE,Bostandyeff, Mr. Guentcho,3rd,Male,26,Southampton
+630,FALSE,O'Connell, Mr. Patrick D,3rd,Male,NA,Queenstown
+631,TRUE,Barkworth, Mr. Algernon Henry Wilson,1st,Male,80,Southampton
+632,FALSE,Lundahl, Mr. Johan Svensson,3rd,Male,51,Southampton
+633,TRUE,Stahelin-Maeglin, Dr. Max,1st,Male,32,Cherbourg
+634,FALSE,Parr, Mr. William Henry Marsh,1st,Male,NA,Southampton
+635,FALSE,Skoog, Miss. Mabel,3rd,Female,9,Southampton
+636,TRUE,Davis, Miss. Mary,2nd,Female,28,Southampton
+637,FALSE,Leinonen, Mr. Antti Gustaf,3rd,Male,32,Southampton
+638,FALSE,Collyer, Mr. Harvey,2nd,Male,31,Southampton
+639,FALSE,Panula, Mrs. Juha (Maria Emilia Ojala),3rd,Female,41,Southampton
+640,FALSE,Thorneycroft, Mr. Percival,3rd,Male,NA,Southampton
+641,FALSE,Jensen, Mr. Hans Peder,3rd,Male,20,Southampton
+642,TRUE,Sagesser, Mlle. Emma,1st,Female,24,Cherbourg
+643,FALSE,Skoog, Miss. Margit Elizabeth,3rd,Female,2,Southampton
+644,TRUE,Foo, Mr. Choong,3rd,Male,NA,Southampton
+645,TRUE,Baclini, Miss. Eugenie,3rd,Female,0,Cherbourg
+646,TRUE,Harper, Mr. Henry Sleeper,1st,Male,48,Cherbourg
+647,FALSE,Cor, Mr. Liudevit,3rd,Male,19,Southampton
+648,TRUE,Simonius-Blumer, Col. Oberst Alfons,1st,Male,56,Cherbourg
+649,FALSE,Willey, Mr. Edward,3rd,Male,NA,Southampton
+650,TRUE,Stanley, Miss. Amy Zillah Elsie,3rd,Female,23,Southampton
+651,FALSE,Mitkoff, Mr. Mito,3rd,Male,NA,Southampton
+652,TRUE,Doling, Miss. Elsie,2nd,Female,18,Southampton
+653,FALSE,Kalvik, Mr. Johannes Halvorsen,3rd,Male,21,Southampton
+654,TRUE,O'Leary," Miss. Hanora ""Norah""",3rd,Female,NA,Queenstown
+655,FALSE,Hegarty," Miss. Hanora ""Nora""",3rd,Female,18,Queenstown
+656,FALSE,Hickman, Mr. Leonard Mark,2nd,Male,24,Southampton
+657,FALSE,Radeff, Mr. Alexander,3rd,Male,NA,Southampton
+658,FALSE,Bourke, Mrs. John (Catherine),3rd,Female,32,Queenstown
+659,FALSE,Eitemiller, Mr. George Floyd,2nd,Male,23,Southampton
+660,FALSE,Newell, Mr. Arthur Webster,1st,Male,58,Cherbourg
+661,TRUE,Frauenthal, Dr. Henry William,1st,Male,50,Southampton
+662,FALSE,Badt, Mr. Mohamed,3rd,Male,40,Cherbourg
+663,FALSE,Colley, Mr. Edward Pomeroy,1st,Male,47,Southampton
+664,FALSE,Coleff, Mr. Peju,3rd,Male,36,Southampton
+665,TRUE,Lindqvist, Mr. Eino William,3rd,Male,20,Southampton
+666,FALSE,Hickman, Mr. Lewis,2nd,Male,32,Southampton
+667,FALSE,Butler, Mr. Reginald Fenton,2nd,Male,25,Southampton
+668,FALSE,Rommetvedt, Mr. Knud Paust,3rd,Male,NA,Southampton
+669,FALSE,Cook, Mr. Jacob,3rd,Male,43,Southampton
+670,TRUE,Taylor, Mrs. Elmer Zebley (Juliet Cummins Wright),1st,Female,NA,Southampton
+671,TRUE,Brown, Mrs. Thomas William Solomon (Elizabeth Catherine Ford),2nd,Female,40,Southampton
+672,FALSE,Davidson, Mr. Thornton,1st,Male,31,Southampton
+673,FALSE,Mitchell, Mr. Henry Michael,2nd,Male,70,Southampton
+674,TRUE,Wilhelms, Mr. Charles,2nd,Male,31,Southampton
+675,FALSE,Watson, Mr. Ennis Hastings,2nd,Male,NA,Southampton
+676,FALSE,Edvardsson, Mr. Gustaf Hjalmar,3rd,Male,18,Southampton
+677,FALSE,Sawyer, Mr. Frederick Charles,3rd,Male,24,Southampton
+678,TRUE,Turja, Miss. Anna Sofia,3rd,Female,18,Southampton
+679,FALSE,Goodwin, Mrs. Frederick (Augusta Tyler),3rd,Female,43,Southampton
+680,TRUE,Cardeza, Mr. Thomas Drake Martinez,1st,Male,36,Cherbourg
+681,FALSE,Peters, Miss. Katie,3rd,Female,NA,Queenstown
+682,TRUE,Hassab, Mr. Hammad,1st,Male,27,Cherbourg
+683,FALSE,Olsvigen, Mr. Thor Anderson,3rd,Male,20,Southampton
+684,FALSE,Goodwin, Mr. Charles Edward,3rd,Male,14,Southampton
+685,FALSE,Brown, Mr. Thomas William Solomon,2nd,Male,60,Southampton
+686,FALSE,Laroche, Mr. Joseph Philippe Lemercier,2nd,Male,25,Cherbourg
+687,FALSE,Panula, Mr. Jaako Arnold,3rd,Male,14,Southampton
+688,FALSE,Dakic, Mr. Branko,3rd,Male,19,Southampton
+689,FALSE,Fischer, Mr. Eberhard Thelander,3rd,Male,18,Southampton
+690,TRUE,Madill, Miss. Georgette Alexandra,1st,Female,15,Southampton
+691,TRUE,Dick, Mr. Albert Adrian,1st,Male,31,Southampton
+692,TRUE,Karun, Miss. Manca,3rd,Female,4,Cherbourg
+693,TRUE,Lam, Mr. Ali,3rd,Male,NA,Southampton
+694,FALSE,Saad, Mr. Khalil,3rd,Male,25,Cherbourg
+695,FALSE,Weir, Col. John,1st,Male,60,Southampton
+696,FALSE,Chapman, Mr. Charles Henry,2nd,Male,52,Southampton
+697,FALSE,Kelly, Mr. James,3rd,Male,44,Southampton
+698,TRUE,Mullens," Miss. Katherine ""Katie""",3rd,Female,NA,Queenstown
+699,FALSE,Thayer, Mr. John Borland,1st,Male,49,Cherbourg
+700,FALSE,Humblen, Mr. Adolf Mathias Nicolai Olsen,3rd,Male,42,Southampton
+701,TRUE,Astor, Mrs. John Jacob (Madeleine Talmadge Force),1st,Female,18,Cherbourg
+702,TRUE,Silverthorne, Mr. Spencer Victor,1st,Male,35,Southampton
+703,FALSE,Barbara, Miss. Saiide,3rd,Female,18,Cherbourg
+704,FALSE,Gallagher, Mr. Martin,3rd,Male,25,Queenstown
+705,FALSE,Hansen, Mr. Henrik Juul,3rd,Male,26,Southampton
+706,FALSE,Morley," Mr. Henry Samuel (""Mr Henry Marshall"")",2nd,Male,39,Southampton
+707,TRUE,Kelly," Mrs. Florence ""Fannie""",2nd,Female,45,Southampton
+708,TRUE,Calderhead, Mr. Edward Pennington,1st,Male,42,Southampton
+709,TRUE,Cleaver, Miss. Alice,1st,Female,22,Southampton
+710,TRUE,Moubarek," Master. Halim Gonios (""William George"")",3rd,Male,NA,Cherbourg
+711,TRUE,Mayne," Mlle. Berthe Antonine (""Mrs de Villiers"")",1st,Female,24,Cherbourg
+712,FALSE,Klaber, Mr. Herman,1st,Male,NA,Southampton
+713,TRUE,Taylor, Mr. Elmer Zebley,1st,Male,48,Southampton
+714,FALSE,Larsson, Mr. August Viktor,3rd,Male,29,Southampton
+715,FALSE,Greenberg, Mr. Samuel,2nd,Male,52,Southampton
+716,FALSE,Soholt, Mr. Peter Andreas Lauritz Andersen,3rd,Male,19,Southampton
+717,TRUE,Endres, Miss. Caroline Louise,1st,Female,38,Cherbourg
+718,TRUE,Troutt," Miss. Edwina Celia ""Winnie""",2nd,Female,27,Southampton
+719,FALSE,McEvoy, Mr. Michael,3rd,Male,NA,Queenstown
+720,FALSE,Johnson, Mr. Malkolm Joackim,3rd,Male,33,Southampton
+721,TRUE,Harper," Miss. Annie Jessie ""Nina""",2nd,Female,6,Southampton
+722,FALSE,Jensen, Mr. Svend Lauritz,3rd,Male,17,Southampton
+723,FALSE,Gillespie, Mr. William Henry,2nd,Male,34,Southampton
+724,FALSE,Hodges, Mr. Henry Price,2nd,Male,50,Southampton
+725,TRUE,Chambers, Mr. Norman Campbell,1st,Male,27,Southampton
+726,FALSE,Oreskovic, Mr. Luka,3rd,Male,20,Southampton
+727,TRUE,Renouf, Mrs. Peter Henry (Lillian Jefferys),2nd,Female,30,Southampton
+728,TRUE,Mannion, Miss. Margareth,3rd,Female,NA,Queenstown
+729,FALSE,Bryhl, Mr. Kurt Arnold Gottfrid,2nd,Male,25,Southampton
+730,FALSE,Ilmakangas, Miss. Pieta Sofia,3rd,Female,25,Southampton
+731,TRUE,Allen, Miss. Elisabeth Walton,1st,Female,29,Southampton
+732,FALSE,Hassan, Mr. Houssein G N,3rd,Male,11,Cherbourg
+733,FALSE,Knight, Mr. Robert J,2nd,Male,NA,Southampton
+734,FALSE,Berriman, Mr. William John,2nd,Male,23,Southampton
+735,FALSE,Troupiansky, Mr. Moses Aaron,2nd,Male,23,Southampton
+736,FALSE,Williams, Mr. Leslie,3rd,Male,28,Southampton
+737,FALSE,Ford, Mrs. Edward (Margaret Ann Watson),3rd,Female,48,Southampton
+738,TRUE,Lesurer, Mr. Gustave J,1st,Male,35,Cherbourg
+739,FALSE,Ivanoff, Mr. Kanio,3rd,Male,NA,Southampton
+740,FALSE,Nankoff, Mr. Minko,3rd,Male,NA,Southampton
+741,TRUE,Hawksford, Mr. Walter James,1st,Male,NA,Southampton
+742,FALSE,Cavendish, Mr. Tyrell William,1st,Male,36,Southampton
+743,TRUE,Ryerson," Miss. Susan Parker ""Suzette""",1st,Female,21,Cherbourg
+744,FALSE,McNamee, Mr. Neal,3rd,Male,24,Southampton
+745,TRUE,Stranden, Mr. Juho,3rd,Male,31,Southampton
+746,FALSE,Crosby, Capt. Edward Gifford,1st,Male,70,Southampton
+747,FALSE,Abbott, Mr. Rossmore Edward,3rd,Male,16,Southampton
+748,TRUE,Sinkkonen, Miss. Anna,2nd,Female,30,Southampton
+749,FALSE,Marvin, Mr. Daniel Warner,1st,Male,19,Southampton
+750,FALSE,Connaghton, Mr. Michael,3rd,Male,31,Queenstown
+751,TRUE,Wells, Miss. Joan,2nd,Female,4,Southampton
+752,TRUE,Moor, Master. Meier,3rd,Male,6,Southampton
+753,FALSE,Vande Velde, Mr. Johannes Joseph,3rd,Male,33,Southampton
+754,FALSE,Jonkoff, Mr. Lalio,3rd,Male,23,Southampton
+755,TRUE,Herman, Mrs. Samuel (Jane Laver),2nd,Female,48,Southampton
+756,TRUE,Hamalainen, Master. Viljo,2nd,Male,0,Southampton
+757,FALSE,Carlsson, Mr. August Sigfrid,3rd,Male,28,Southampton
+758,FALSE,Bailey, Mr. Percy Andrew,2nd,Male,18,Southampton
+759,FALSE,Theobald, Mr. Thomas Leonard,3rd,Male,34,Southampton
+760,TRUE,Rothes, the Countess. of (Lucy Noel Martha Dyer-Edwards),1st,Female,33,Southampton
+761,FALSE,Garfirth, Mr. John,3rd,Male,NA,Southampton
+762,FALSE,Nirva, Mr. Iisakki Antino Aijo,3rd,Male,41,Southampton
+763,TRUE,Barah, Mr. Hanna Assi,3rd,Male,20,Cherbourg
+764,TRUE,Carter, Mrs. William Ernest (Lucile Polk),1st,Female,36,Southampton
+765,FALSE,Eklund, Mr. Hans Linus,3rd,Male,16,Southampton
+766,TRUE,Hogeboom, Mrs. John C (Anna Andrews),1st,Female,51,Southampton
+767,FALSE,Brewe, Dr. Arthur Jackson,1st,Male,NA,Cherbourg
+768,FALSE,Mangan, Miss. Mary,3rd,Female,30,Queenstown
+769,FALSE,Moran, Mr. Daniel J,3rd,Male,NA,Queenstown
+770,FALSE,Gronnestad, Mr. Daniel Danielsen,3rd,Male,32,Southampton
+771,FALSE,Lievens, Mr. Rene Aime,3rd,Male,24,Southampton
+772,FALSE,Jensen, Mr. Niels Peder,3rd,Male,48,Southampton
+773,FALSE,Mack, Mrs. (Mary),2nd,Female,57,Southampton
+774,FALSE,Elias, Mr. Dibo,3rd,Male,NA,Cherbourg
+775,TRUE,Hocking, Mrs. Elizabeth (Eliza Needs),2nd,Female,54,Southampton
+776,FALSE,Myhrman, Mr. Pehr Fabian Oliver Malkolm,3rd,Male,18,Southampton
+777,FALSE,Tobin, Mr. Roger,3rd,Male,NA,Queenstown
+778,TRUE,Emanuel, Miss. Virginia Ethel,3rd,Female,5,Southampton
+779,FALSE,Kilgannon, Mr. Thomas J,3rd,Male,NA,Queenstown
+780,TRUE,Robert, Mrs. Edward Scott (Elisabeth Walton McMillan),1st,Female,43,Southampton
+781,TRUE,Ayoub, Miss. Banoura,3rd,Female,13,Cherbourg
+782,TRUE,Dick, Mrs. Albert Adrian (Vera Gillespie),1st,Female,17,Southampton
+783,FALSE,Long, Mr. Milton Clyde,1st,Male,29,Southampton
+784,FALSE,Johnston, Mr. Andrew G,3rd,Male,NA,Southampton
+785,FALSE,Ali, Mr. William,3rd,Male,25,Southampton
+786,FALSE,Harmer, Mr. Abraham (David Lishin),3rd,Male,25,Southampton
+787,TRUE,Sjoblom, Miss. Anna Sofia,3rd,Female,18,Southampton
+788,FALSE,Rice, Master. George Hugh,3rd,Male,8,Queenstown
+789,TRUE,Dean, Master. Bertram Vere,3rd,Male,1,Southampton
+790,FALSE,Guggenheim, Mr. Benjamin,1st,Male,46,Cherbourg
+791,FALSE,Keane," Mr. Andrew ""Andy""",3rd,Male,NA,Queenstown
+792,FALSE,Gaskell, Mr. Alfred,2nd,Male,16,Southampton
+793,FALSE,Sage, Miss. Stella Anna,3rd,Female,NA,Southampton
+794,FALSE,Hoyt, Mr. William Fisher,1st,Male,NA,Cherbourg
+795,FALSE,Dantcheff, Mr. Ristiu,3rd,Male,25,Southampton
+796,FALSE,Otter, Mr. Richard,2nd,Male,39,Southampton
+797,TRUE,Leader, Dr. Alice (Farnham),1st,Female,49,Southampton
+798,TRUE,Osman, Mrs. Mara,3rd,Female,31,Southampton
+799,FALSE,Ibrahim Shawah, Mr. Yousseff,3rd,Male,30,Cherbourg
+800,FALSE,Van Impe, Mrs. Jean Baptiste (Rosalie Paula Govaert),3rd,Female,30,Southampton
+801,FALSE,Ponesell, Mr. Martin,2nd,Male,34,Southampton
+802,TRUE,Collyer, Mrs. Harvey (Charlotte Annie Tate),2nd,Female,31,Southampton
+803,TRUE,Carter, Master. William Thornton II,1st,Male,11,Southampton
+804,TRUE,Thomas, Master. Assad Alexander,3rd,Male,0,Cherbourg
+805,TRUE,Hedman, Mr. Oskar Arvid,3rd,Male,27,Southampton
+806,FALSE,Johansson, Mr. Karl Johan,3rd,Male,31,Southampton
+807,FALSE,Andrews, Mr. Thomas Jr,1st,Male,39,Southampton
+808,FALSE,Pettersson, Miss. Ellen Natalia,3rd,Female,18,Southampton
+809,FALSE,Meyer, Mr. August,2nd,Male,39,Southampton
+810,TRUE,Chambers, Mrs. Norman Campbell (Bertha Griggs),1st,Female,33,Southampton
+811,FALSE,Alexander, Mr. William,3rd,Male,26,Southampton
+812,FALSE,Lester, Mr. James,3rd,Male,39,Southampton
+813,FALSE,Slemen, Mr. Richard James,2nd,Male,35,Southampton
+814,FALSE,Andersson, Miss. Ebba Iris Alfrida,3rd,Female,6,Southampton
+815,FALSE,Tomlin, Mr. Ernest Portage,3rd,Male,30,Southampton
+816,FALSE,Fry, Mr. Richard,1st,Male,NA,Southampton
+817,FALSE,Heininen, Miss. Wendla Maria,3rd,Female,23,Southampton
+818,FALSE,Mallet, Mr. Albert,2nd,Male,31,Cherbourg
+819,FALSE,Holm, Mr. John Fredrik Alexander,3rd,Male,43,Southampton
+820,FALSE,Skoog, Master. Karl Thorsten,3rd,Male,10,Southampton
+821,TRUE,Hays, Mrs. Charles Melville (Clara Jennings Gregg),1st,Female,52,Southampton
+822,TRUE,Lulic, Mr. Nikola,3rd,Male,27,Southampton
+823,FALSE,Reuchlin, Jonkheer. John George,1st,Male,38,Southampton
+824,TRUE,Moor, Mrs. (Beila),3rd,Female,27,Southampton
+825,FALSE,Panula, Master. Urho Abraham,3rd,Male,2,Southampton
+826,FALSE,Flynn, Mr. John,3rd,Male,NA,Queenstown
+827,FALSE,Lam, Mr. Len,3rd,Male,NA,Southampton
+828,TRUE,Mallet, Master. Andre,2nd,Male,1,Cherbourg
+829,TRUE,McCormack, Mr. Thomas Joseph,3rd,Male,NA,Queenstown
+830,TRUE,Stone, Mrs. George Nelson (Martha Evelyn),1st,Female,62,NA
+831,TRUE,Yasbeck, Mrs. Antoni (Selini Alexander),3rd,Female,15,Cherbourg
+832,TRUE,Richards, Master. George Sibley,2nd,Male,0,Southampton
+833,FALSE,Saad, Mr. Amin,3rd,Male,NA,Cherbourg
+834,FALSE,Augustsson, Mr. Albert,3rd,Male,23,Southampton
+835,FALSE,Allum, Mr. Owen George,3rd,Male,18,Southampton
+836,TRUE,Compton, Miss. Sara Rebecca,1st,Female,39,Cherbourg
+837,FALSE,Pasic, Mr. Jakob,3rd,Male,21,Southampton
+838,FALSE,Sirota, Mr. Maurice,3rd,Male,NA,Southampton
+839,TRUE,Chip, Mr. Chang,3rd,Male,32,Southampton
+840,TRUE,Marechal, Mr. Pierre,1st,Male,NA,Cherbourg
+841,FALSE,Alhomaki, Mr. Ilmari Rudolf,3rd,Male,20,Southampton
+842,FALSE,Mudd, Mr. Thomas Charles,2nd,Male,16,Southampton
+843,TRUE,Serepeca, Miss. Augusta,1st,Female,30,Cherbourg
+844,FALSE,Lemberopolous, Mr. Peter L,3rd,Male,34,Cherbourg
+845,FALSE,Culumovic, Mr. Jeso,3rd,Male,17,Southampton
+846,FALSE,Abbing, Mr. Anthony,3rd,Male,42,Southampton
+847,FALSE,Sage, Mr. Douglas Bullen,3rd,Male,NA,Southampton
+848,FALSE,Markoff, Mr. Marin,3rd,Male,35,Cherbourg
+849,FALSE,Harper, Rev. John,2nd,Male,28,Southampton
+850,TRUE,Goldenberg, Mrs. Samuel L (Edwiga Grabowska),1st,Female,NA,Cherbourg
+851,FALSE,Andersson, Master. Sigvard Harald Elias,3rd,Male,4,Southampton
+852,FALSE,Svensson, Mr. Johan,3rd,Male,74,Southampton
+853,FALSE,Boulos, Miss. Nourelain,3rd,Female,9,Cherbourg
+854,TRUE,Lines, Miss. Mary Conover,1st,Female,16,Southampton
+855,FALSE,Carter, Mrs. Ernest Courtenay (Lilian Hughes),2nd,Female,44,Southampton
+856,TRUE,Aks, Mrs. Sam (Leah Rosen),3rd,Female,18,Southampton
+857,TRUE,Wick, Mrs. George Dennick (Mary Hitchcock),1st,Female,45,Southampton
+858,TRUE,Daly, Mr. Peter Denis ,1st,Male,51,Southampton
+859,TRUE,Baclini, Mrs. Solomon (Latifa Qurban),3rd,Female,24,Cherbourg
+860,FALSE,Razi, Mr. Raihed,3rd,Male,NA,Cherbourg
+861,FALSE,Hansen, Mr. Claus Peter,3rd,Male,41,Southampton
+862,FALSE,Giles, Mr. Frederick Edward,2nd,Male,21,Southampton
+863,TRUE,Swift, Mrs. Frederick Joel (Margaret Welles Barron),1st,Female,48,Southampton
+864,FALSE,Sage," Miss. Dorothy Edith ""Dolly""",3rd,Female,NA,Southampton
+865,FALSE,Gill, Mr. John William,2nd,Male,24,Southampton
+866,TRUE,Bystrom, Mrs. (Karolina),2nd,Female,42,Southampton
+867,TRUE,Duran y More, Miss. Asuncion,2nd,Female,27,Cherbourg
+868,FALSE,Roebling, Mr. Washington Augustus II,1st,Male,31,Southampton
+869,FALSE,van Melkebeke, Mr. Philemon,3rd,Male,NA,Southampton
+870,TRUE,Johnson, Master. Harold Theodor,3rd,Male,4,Southampton
+871,FALSE,Balkic, Mr. Cerin,3rd,Male,26,Southampton
+872,TRUE,Beckwith, Mrs. Richard Leonard (Sallie Monypeny),1st,Female,47,Southampton
+873,FALSE,Carlsson, Mr. Frans Olof,1st,Male,33,Southampton
+874,FALSE,Vander Cruyssen, Mr. Victor,3rd,Male,47,Southampton
+875,TRUE,Abelson, Mrs. Samuel (Hannah Wizosky),2nd,Female,28,Cherbourg
+876,TRUE,Najib," Miss. Adele Kiamie ""Jane""",3rd,Female,15,Cherbourg
+877,FALSE,Gustafsson, Mr. Alfred Ossian,3rd,Male,20,Southampton
+878,FALSE,Petroff, Mr. Nedelio,3rd,Male,19,Southampton
+879,FALSE,Laleff, Mr. Kristo,3rd,Male,NA,Southampton
+880,TRUE,Potter, Mrs. Thomas Jr (Lily Alexenia Wilson),1st,Female,56,Cherbourg
+881,TRUE,Shelley, Mrs. William (Imanita Parrish Hall),2nd,Female,25,Southampton
+882,FALSE,Markun, Mr. Johann,3rd,Male,33,Southampton
+883,FALSE,Dahlberg, Miss. Gerda Ulrika,3rd,Female,22,Southampton
+884,FALSE,Banfield, Mr. Frederick James,2nd,Male,28,Southampton
+885,FALSE,Sutehall, Mr. Henry Jr,3rd,Male,25,Southampton
+886,FALSE,Rice, Mrs. William (Margaret Norton),3rd,Female,39,Queenstown
+887,FALSE,Montvila, Rev. Juozas,2nd,Male,27,Southampton
+888,TRUE,Graham, Miss. Margaret Edith,1st,Female,19,Southampton
+889,FALSE,Johnston," Miss. Catherine Helen ""Carrie""",3rd,Female,NA,Southampton
+890,TRUE,Behr, Mr. Karl Howell,1st,Male,26,Cherbourg
+891,FALSE,Dooley, Mr. Patrick,3rd,Male,32,Queenstown

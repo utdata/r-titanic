@@ -1,0 +1,108 @@
+---
+title: "Titanic"
+format: html
+---
+
+```{r}
+library(tidyverse)
+library(titanic)
+library(janitor)
+```
+
+This is the data
+
+From above sample of the RMS Titanic data, one can see various features present for each passenger on the ship:
+
+- PassengerId : Unique id of each passenger
+- Survived: Outcome of survival (0 = No; 1 = Yes)
+- Pclass: Socio-economic class (1 = Upper class; 2 = Middle class; 3 = Lower class)
+- Name: Name of passenger
+- Sex: Sex of the passenger
+- Age: Age of the passenger (Some entries contain NaN)
+- SibSp: Number of siblings and spouses of the passenger aboard
+- Parch: Number of parents and children of the passenger aboard
+- Ticket: Ticket number of the passenger
+- Fare: Fare paid by the passenger
+- Cabin Cabin number of the passenger (Some entries contain NaN)
+- Embarked: Port of embarkation of the passenger (C = Cherbourg; Q = Queenstown; S = Southampton)
+
+
+```{r}
+titanic_raw <- titanic::titanic_train %>% clean_names()
+
+titanic_raw %>% glimpse()
+```
+
+## Clean the data
+
+Let's make some more friendly data.
+
+I am removing some fields: siblings, parents, ticket, fare, cabing.
+
+```{r}
+titanic_clean <- titanic_raw %>% 
+  mutate(
+    survived = if_else(survived == 1, TRUE, FALSE),
+    class = case_match(
+      pclass,
+      1 ~ "1st",
+      2 ~ "2nd",
+      3 ~ "3rd",
+      .default = NA
+    ),
+    embarked = case_match(
+      embarked,
+      "C" ~ "Cherbourg",
+      "Q" ~ "Queenstown",
+      "S" ~ "Southampton"
+    ),
+    sex = str_to_title(sex),
+    surname = str_split_i(name, ",", 1),
+    first_names = str_split_i(name, ",", 2),
+    age = as.integer(age)
+  ) |> 
+  select(
+    passenger_id,
+    survived,
+    surname,
+    first_names,
+    class,
+    sex,
+    age,
+    embarked
+  )
+  
+titanic_clean %>% glimpse()
+
+```
+
+## Export
+
+```{r}
+titanic_clean |> write_rds("data/tr_titanic.rds")
+titanic_clean |> write_csv("data/tr_titanic.csv")
+```
+
+## Compare exported files
+
+```{r}
+tr <- read_rds("data/tr_titanic.rds")
+tf <- read_rds("data/tf_titanic.rds")
+```
+
+Peek
+
+```{r}
+tr |> arrange(surname, first_names) |> glimpse()
+tf |> arrange(surname, first_names) |> glimpse()
+```
+
+```{r}
+tf |> arrange(surname)
+```
+
+```{r}
+tr |> arrange(surname) |> 
+  filter(str_detect(first_names, "Nas"))
+```
+

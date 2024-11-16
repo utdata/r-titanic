@@ -29,15 +29,15 @@ page_raw <- read_html("https://titanicfacts.net/titanic-passenger-list/")
 Find the tables on that page
 
 ```{r}
-tables_list <- page_raw %>% html_table()
+tables_list <- page_raw |> html_table()
 ```
 
 The tables have bad column names. I fix that, add what class passenger they were based on the table they came from.
 
 ```{r}
-c1_raw <- tables_list[[1]] %>% row_to_names(1) %>% mutate(class = "1st") %>% clean_names()
-c2_raw <- tables_list[[2]] %>% row_to_names(1) %>% mutate(class = "2nd") %>% clean_names()
-c3_raw <- tables_list[[3]] %>% row_to_names(1) %>% mutate(class = "3rd") %>% clean_names()
+c1_raw <- tables_list[[1]] |> row_to_names(1) |> mutate(class = "1st") |> clean_names()
+c2_raw <- tables_list[[2]] |> row_to_names(1) |> mutate(class = "2nd") |> clean_names()
+c3_raw <- tables_list[[3]] |> row_to_names(1) |> mutate(class = "3rd") |> clean_names()
 
 pass_combo <- bind_rows(c1_raw, c2_raw, c3_raw)
 ```
@@ -45,13 +45,13 @@ pass_combo <- bind_rows(c1_raw, c2_raw, c3_raw)
 Here I adjust the survivor column to remove cross for V for victim. Also renames.
 
 ```{r}
-passengers <- pass_combo %>%
+passengers <- pass_combo |>
   mutate(survivor_victim = if_else(
     survivor_s_or_victim == "S", "S", "V")
-  ) %>%
+  ) |>
   select(-survivor_s_or_victim)
 
-passengers %>% glimpse()
+passengers |> glimpse()
 ```
 
 ## Survivors
@@ -74,18 +74,23 @@ While it is really one table, they split it into three I guess so they can add a
 
 I also have to fix the column names and then remove the extra columns names from the 2nd and 3rd tables.
 
+I also add the survivor_victim column to match the passenger list.
+
 ```{r}
-surv_raw <- surv_tables %>% list_rbind() %>% row_to_names(1) %>% clean_names()
+surv_raw <- surv_tables |>  list_rbind() |>  row_to_names(1) |> clean_names()
 
-survivors <- surv_raw %>% filter(class != "Class")
+survivors <- surv_raw |>
+  filter(class != "Class") |> 
+  mutate(survivor_victim = "S")
 
-survivors %>% glimpse()
+
+survivors |> glimpse()
 ```
 
 What is lifeboat?
 
 ```{r}
-survivors %>% count(lifeboat_number)
+survivors |> count(lifeboat_number)
 ```
 
 ## Combine these files
@@ -93,21 +98,29 @@ survivors %>% count(lifeboat_number)
 I'm combining the survivor list, which has the lifeboat, with the passenger list. I have to first drop the survivors from the passengers list then bind them back from the survivors list.
 
 ```{r}
-titanic <- passengers %>% filter(survivor_victim == "S") %>% 
-  bind_rows(survivors)
+titanic <- passengers |> filter(survivor_victim == "V") |> 
+  bind_rows(survivors) |> 
+  arrange(surname, desc(age))
 
-titanic %>% slice_sample(n = 20)
+titanic |> slice_sample(n = 20)
 ```
+
+## Checks
+
+```{r}
+titanic |> filter(str_detect(surname, "Smith"))
+```
+
 
 ## Exporting files
 
 I export the individual files, and then the combined ones as both rds and csv.
 
 ```{r}
-passengers %>% write_rds("data/tf_passengers.rds")
-survivors %>% write_rds("data/tf_survivors.rds")
-titanic %>% write_rds("data/tf_titanic.rds")
-titanic %>% write_csv("data/tf_titanic.csv")
+passengers |> write_rds("data/tf_passengers.rds")
+survivors |> write_rds("data/tf_survivors.rds")
+titanic |> write_rds("data/tf_titanic.rds")
+titanic |> write_csv("data/tf_titanic.csv")
 ```
 
 

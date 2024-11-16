@@ -1,0 +1,121 @@
+[
+  {
+    "objectID": "01-scrape-titanic.html",
+    "href": "01-scrape-titanic.html",
+    "title": "Scrape titanic list",
+    "section": "",
+    "text": "The site Titanic Facts has a full list of passengers and a list of just the survivors and their lifeboat.\nMy aim is to get a single list that I can use in class."
+  },
+  {
+    "objectID": "01-scrape-titanic.html#setup",
+    "href": "01-scrape-titanic.html#setup",
+    "title": "Scrape titanic list",
+    "section": "Setup",
+    "text": "Setup\n\nlibrary(tidyverse)\nlibrary(janitor)\nlibrary(rvest)"
+  },
+  {
+    "objectID": "01-scrape-titanic.html#scrape-the-dead",
+    "href": "01-scrape-titanic.html#scrape-the-dead",
+    "title": "Scrape titanic list",
+    "section": "Scrape the dead",
+    "text": "Scrape the dead\nGet the web page\n\npage_raw &lt;- read_html(\"https://titanicfacts.net/titanic-passenger-list/\")\n\nFind the tables on that page\n\ntables_list &lt;- page_raw |&gt; html_table()\n\nThe tables have bad column names. I fix that, add what class passenger they were based on the table they came from.\n\nc1_raw &lt;- tables_list[[1]] |&gt; row_to_names(1) |&gt; mutate(class = \"1st\") |&gt; clean_names()\nc2_raw &lt;- tables_list[[2]] |&gt; row_to_names(1) |&gt; mutate(class = \"2nd\") |&gt; clean_names()\nc3_raw &lt;- tables_list[[3]] |&gt; row_to_names(1) |&gt; mutate(class = \"3rd\") |&gt; clean_names()\n\npass_combo &lt;- bind_rows(c1_raw, c2_raw, c3_raw)\n\nHere I adjust the survivor column to remove cross for V for victim. Also renames.\n\npassengers &lt;- pass_combo |&gt;\n  mutate(survivor_victim = if_else(\n    survivor_s_or_victim == \"S\", \"S\", \"V\")\n  ) |&gt;\n  select(-survivor_s_or_victim)\n\npassengers |&gt; glimpse()\n\nRows: 1,317\nColumns: 6\n$ surname         &lt;chr&gt; \"Allen\", \"Allison\", \"Allison\", \"Allison\", \"Allison\", \"…\n$ first_names     &lt;chr&gt; \"Miss Elisabeth Walton\", \"Mr Hudson Joshua Creighton\",…\n$ age             &lt;chr&gt; \"29\", \"30\", \"25\", \"2\", \"11m\", \"47\", \"62\", \"39\", \"53\", …\n$ boarded         &lt;chr&gt; \"Southampton\", \"Southampton\", \"Southampton\", \"Southamp…\n$ class           &lt;chr&gt; \"1st\", \"1st\", \"1st\", \"1st\", \"1st\", \"1st\", \"1st\", \"1st\"…\n$ survivor_victim &lt;chr&gt; \"S\", \"V\", \"V\", \"V\", \"S\", \"S\", \"S\", \"V\", \"S\", \"V\", \"V\",…"
+  },
+  {
+    "objectID": "01-scrape-titanic.html#survivors",
+    "href": "01-scrape-titanic.html#survivors",
+    "title": "Scrape titanic list",
+    "section": "Survivors",
+    "text": "Survivors\nThe survivors list are the same folks as on the passenger list if they survived, with the addition of what lifeboat they were in.\nGet the page\n\nsurv_page_raw &lt;- read_html(\"https://titanicfacts.net/titanic-survivors-list/\")\n\nGet the tables\n\nsurv_tables &lt;- html_table(surv_page_raw)\n\nWhile it is really one table, they split it into three I guess so they can add a “back to top” link in between them. I just mush them all together.\nI also have to fix the column names and then remove the extra columns names from the 2nd and 3rd tables.\nI also add the survivor_victim column to match the passenger list.\n\nsurv_raw &lt;- surv_tables |&gt;  list_rbind() |&gt;  row_to_names(1) |&gt; clean_names()\n\nsurvivors &lt;- surv_raw |&gt;\n  filter(class != \"Class\") |&gt; \n  mutate(survivor_victim = \"S\")\n\n\nsurvivors |&gt; glimpse()\n\nRows: 484\nColumns: 7\n$ surname         &lt;chr&gt; \"Ab ī-Al-Munà\", \"Abbott\", \"Abelseth\", \"Abelseth\", \"Abe…\n$ first_names     &lt;chr&gt; \"Mr Nās īf Qāsim\", \"Mrs Rhoda Mary “Rosa”\", \"Mr Olaus …\n$ age             &lt;chr&gt; \"26\", \"39\", \"25\", \"16\", \"28\", \"20\", \"18\", \"10m\", \"29\",…\n$ boarded         &lt;chr&gt; \"Cherbourg\", \"Southampton\", \"Southampton\", \"Southampto…\n$ class           &lt;chr&gt; \"3rd\", \"3rd\", \"3rd\", \"3rd\", \"2nd\", \"3rd\", \"3rd\", \"3rd\"…\n$ lifeboat_number &lt;chr&gt; \"15\", \"A\", \"A\", \"16\", \"10\", \"15\", \"13\", \"11\", \"2\", \"11…\n$ survivor_victim &lt;chr&gt; \"S\", \"S\", \"S\", \"S\", \"S\", \"S\", \"S\", \"S\", \"S\", \"S\", \"S\",…\n\n\nWhat is lifeboat?\n\nsurvivors |&gt; count(lifeboat_number)\n\n# A tibble: 20 × 2\n   lifeboat_number     n\n   &lt;chr&gt;           &lt;int&gt;\n 1 1                   5\n 2 10                 30\n 3 11                 26\n 4 12                 17\n 5 13                 40\n 6 14                 33\n 7 15                 37\n 8 16                 25\n 9 2                  14\n10 3                  26\n11 4                  31\n12 5                  29\n13 6                  21\n14 7                  23\n15 8                  24\n16 9                  26\n17 A                  10\n18 B                   9\n19 C                  41\n20 D                  17"
+  },
+  {
+    "objectID": "01-scrape-titanic.html#combine-these-files",
+    "href": "01-scrape-titanic.html#combine-these-files",
+    "title": "Scrape titanic list",
+    "section": "Combine these files",
+    "text": "Combine these files\nI’m combining the survivor list, which has the lifeboat, with the passenger list. I have to first drop the survivors from the passengers list then bind them back from the survivors list.\n\ntitanic &lt;- passengers |&gt; filter(survivor_victim == \"V\") |&gt; \n  bind_rows(survivors) |&gt; \n  arrange(surname, desc(age))\n\ntitanic |&gt; slice_sample(n = 20)\n\n# A tibble: 20 × 7\n   surname       first_names age   boarded class survivor_victim lifeboat_number\n   &lt;chr&gt;         &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt; &lt;chr&gt;           &lt;chr&gt;          \n 1 Youssiff (Sa… Mr Gerios   45    Cherbo… 3rd   V               &lt;NA&gt;           \n 2 Kenyon        Mr Frederi… 41    Southa… 1st   V               &lt;NA&gt;           \n 3 Meyer         Mrs Leila   25    Cherbo… 1st   S               6              \n 4 Farrell       Mr James    25    Queens… 3rd   V               &lt;NA&gt;           \n 5 Hold          Mr Stephen  44    Southa… 2nd   V               &lt;NA&gt;           \n 6 Mangiavacchi  Mr Serafin… 30    Cherbo… 2nd   V               &lt;NA&gt;           \n 7 Marvin        Mr Daniel … 18    Southa… 1st   V               &lt;NA&gt;           \n 8 Pallàs I Cas… Señor Emili 29    Cherbo… 2nd   S               9              \n 9 Brandeis      Mr Emil Fr… 48    Cherbo… 1st   V               &lt;NA&gt;           \n10 Bowerman      Miss Elsie… 22    Southa… 1st   S               6              \n11 Rogers        Mr Reginal… 18    Southa… 2nd   V               &lt;NA&gt;           \n12 Cumings       Mr John Br… 39    Cherbo… 1st   V               &lt;NA&gt;           \n13 Ismay         Mr Joseph … 49    Southa… 1st   S               C              \n14 Panula        Mr Ernesti… 16    Southa… 3rd   V               &lt;NA&gt;           \n15 Lefebvre      Miss Mathi… 12    Southa… 3rd   V               &lt;NA&gt;           \n16 Ford          Mrs Margar… 54    Southa… 3rd   V               &lt;NA&gt;           \n17 Del Carlo     Mr Sebasti… 29    Cherbo… 2nd   V               &lt;NA&gt;           \n18 Andrews       Mr Thomas   39    Belfast 1st   V               &lt;NA&gt;           \n19 McGowan       Miss Cathe… 42    Queens… 3rd   V               &lt;NA&gt;           \n20 Thorne        Miss Gertr… 38    Cherbo… 1st   S               D"
+  },
+  {
+    "objectID": "01-scrape-titanic.html#checks",
+    "href": "01-scrape-titanic.html#checks",
+    "title": "Scrape titanic list",
+    "section": "Checks",
+    "text": "Checks\n\ntitanic |&gt; filter(str_detect(surname, \"Smith\"))\n\n# A tibble: 5 × 7\n  surname first_names        age   boarded class survivor_victim lifeboat_number\n  &lt;chr&gt;   &lt;chr&gt;              &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt; &lt;chr&gt;           &lt;chr&gt;          \n1 Smith   Mr Richard William 57    Southa… 1st   V               &lt;NA&gt;           \n2 Smith   Mr James Clinch    56    Cherbo… 1st   V               &lt;NA&gt;           \n3 Smith   Miss Marion Elsie  39    Southa… 2nd   S               9              \n4 Smith   Mr Lucian Philip   24    Cherbo… 1st   V               &lt;NA&gt;           \n5 Smith   Mrs Mary Eloise    18    Cherbo… 1st   S               6"
+  },
+  {
+    "objectID": "01-scrape-titanic.html#exporting-files",
+    "href": "01-scrape-titanic.html#exporting-files",
+    "title": "Scrape titanic list",
+    "section": "Exporting files",
+    "text": "Exporting files\nI export the individual files, and then the combined ones as both rds and csv.\n\npassengers |&gt; write_rds(\"data/tf_passengers.rds\")\nsurvivors |&gt; write_rds(\"data/tf_survivors.rds\")\ntitanic |&gt; write_rds(\"data/tf_titanic.rds\")\ntitanic |&gt; write_csv(\"data/tf_titanic.csv\")"
+  },
+  {
+    "objectID": "01-titanic-package.html",
+    "href": "01-titanic-package.html",
+    "title": "Titanic",
+    "section": "",
+    "text": "library(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(titanic)\nlibrary(janitor)\n\n\nAttaching package: 'janitor'\n\nThe following objects are masked from 'package:stats':\n\n    chisq.test, fisher.test\nThis is the data\nFrom above sample of the RMS Titanic data, one can see various features present for each passenger on the ship:\ntitanic_raw &lt;- titanic::titanic_train %&gt;% clean_names()\n\ntitanic_raw %&gt;% glimpse()\n\nRows: 891\nColumns: 12\n$ passenger_id &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17…\n$ survived     &lt;int&gt; 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, …\n$ pclass       &lt;int&gt; 3, 1, 3, 1, 3, 3, 1, 3, 3, 2, 3, 1, 3, 3, 3, 2, 3, 2, 3, …\n$ name         &lt;chr&gt; \"Braund, Mr. Owen Harris\", \"Cumings, Mrs. John Bradley (F…\n$ sex          &lt;chr&gt; \"male\", \"female\", \"female\", \"female\", \"male\", \"male\", \"ma…\n$ age          &lt;dbl&gt; 22, 38, 26, 35, 35, NA, 54, 2, 27, 14, 4, 58, 20, 39, 14,…\n$ sib_sp       &lt;int&gt; 1, 1, 0, 1, 0, 0, 0, 3, 0, 1, 1, 0, 0, 1, 0, 0, 4, 0, 1, …\n$ parch        &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 1, 2, 0, 1, 0, 0, 5, 0, 0, 1, 0, 0, …\n$ ticket       &lt;chr&gt; \"A/5 21171\", \"PC 17599\", \"STON/O2. 3101282\", \"113803\", \"3…\n$ fare         &lt;dbl&gt; 7.2500, 71.2833, 7.9250, 53.1000, 8.0500, 8.4583, 51.8625…\n$ cabin        &lt;chr&gt; \"\", \"C85\", \"\", \"C123\", \"\", \"\", \"E46\", \"\", \"\", \"\", \"G6\", \"…\n$ embarked     &lt;chr&gt; \"S\", \"C\", \"S\", \"S\", \"S\", \"Q\", \"S\", \"S\", \"S\", \"C\", \"S\", \"S…"
+  },
+  {
+    "objectID": "01-titanic-package.html#clean-the-data",
+    "href": "01-titanic-package.html#clean-the-data",
+    "title": "Titanic",
+    "section": "Clean the data",
+    "text": "Clean the data\nLet’s make some more friendly data.\nI am removing some fields: siblings, parents, ticket, fare, cabing.\n\ntitanic_clean &lt;- titanic_raw %&gt;% \n  mutate(\n    survived = if_else(survived == 1, TRUE, FALSE),\n    class = case_match(\n      pclass,\n      1 ~ \"1st\",\n      2 ~ \"2nd\",\n      3 ~ \"3rd\",\n      .default = NA\n    ),\n    embarked = case_match(\n      embarked,\n      \"C\" ~ \"Cherbourg\",\n      \"Q\" ~ \"Queenstown\",\n      \"S\" ~ \"Southampton\"\n    ),\n    sex = str_to_title(sex),\n    surname = str_split_i(name, \",\", 1),\n    first_names = str_split_i(name, \",\", 2),\n    age = as.integer(age)\n  ) |&gt; \n  select(\n    passenger_id,\n    survived,\n    surname,\n    first_names,\n    class,\n    sex,\n    age,\n    embarked\n  )\n  \ntitanic_clean %&gt;% glimpse()\n\nRows: 891\nColumns: 8\n$ passenger_id &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17…\n$ survived     &lt;lgl&gt; FALSE, TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, FALSE, TRUE…\n$ surname      &lt;chr&gt; \"Braund\", \"Cumings\", \"Heikkinen\", \"Futrelle\", \"Allen\", \"M…\n$ first_names  &lt;chr&gt; \" Mr. Owen Harris\", \" Mrs. John Bradley (Florence Briggs …\n$ class        &lt;chr&gt; \"3rd\", \"1st\", \"3rd\", \"1st\", \"3rd\", \"3rd\", \"1st\", \"3rd\", \"…\n$ sex          &lt;chr&gt; \"Male\", \"Female\", \"Female\", \"Female\", \"Male\", \"Male\", \"Ma…\n$ age          &lt;int&gt; 22, 38, 26, 35, 35, NA, 54, 2, 27, 14, 4, 58, 20, 39, 14,…\n$ embarked     &lt;chr&gt; \"Southampton\", \"Cherbourg\", \"Southampton\", \"Southampton\",…"
+  },
+  {
+    "objectID": "01-titanic-package.html#export",
+    "href": "01-titanic-package.html#export",
+    "title": "Titanic",
+    "section": "Export",
+    "text": "Export\n\ntitanic_clean |&gt; write_rds(\"data/tr_titanic.rds\")\ntitanic_clean |&gt; write_csv(\"data/tr_titanic.csv\")"
+  },
+  {
+    "objectID": "01-titanic-package.html#compare-exported-files",
+    "href": "01-titanic-package.html#compare-exported-files",
+    "title": "Titanic",
+    "section": "Compare exported files",
+    "text": "Compare exported files\n\ntr &lt;- read_rds(\"data/tr_titanic.rds\")\ntf &lt;- read_rds(\"data/tf_titanic.rds\")\n\nPeek\n\ntr |&gt; arrange(surname, first_names) |&gt; glimpse()\n\nRows: 891\nColumns: 8\n$ passenger_id &lt;int&gt; 846, 747, 280, 309, 875, 366, 402, 41, 856, 208, 811, 841…\n$ survived     &lt;lgl&gt; FALSE, FALSE, TRUE, FALSE, TRUE, FALSE, FALSE, FALSE, TRU…\n$ surname      &lt;chr&gt; \"Abbing\", \"Abbott\", \"Abbott\", \"Abelson\", \"Abelson\", \"Adah…\n$ first_names  &lt;chr&gt; \" Mr. Anthony\", \" Mr. Rossmore Edward\", \" Mrs. Stanton (R…\n$ class        &lt;chr&gt; \"3rd\", \"3rd\", \"3rd\", \"2nd\", \"2nd\", \"3rd\", \"3rd\", \"3rd\", \"…\n$ sex          &lt;chr&gt; \"Male\", \"Male\", \"Female\", \"Male\", \"Female\", \"Male\", \"Male…\n$ age          &lt;int&gt; 42, 16, 35, 30, 28, 30, 26, 40, 18, 26, 26, 20, 24, 25, 2…\n$ embarked     &lt;chr&gt; \"Southampton\", \"Southampton\", \"Southampton\", \"Cherbourg\",…\n\ntf |&gt; arrange(surname, first_names) |&gt; glimpse()\n\nRows: 1,317\nColumns: 7\n$ surname         &lt;chr&gt; \"Ab ī-Al-Munà\", \"Abbing\", \"Abbott\", \"Abbott\", \"Abbott\"…\n$ first_names     &lt;chr&gt; \"Mr Nās īf Qāsim\", \"Mr Anthony\", \"Mr Eugene Joseph\", \"…\n$ age             &lt;chr&gt; \"26\", \"42\", \"14\", \"16\", \"39\", \"16\", \"25\", \"30\", \"28\", …\n$ boarded         &lt;chr&gt; \"Cherbourg\", \"Southampton\", \"Southampton\", \"Southampto…\n$ class           &lt;chr&gt; \"3rd\", \"3rd\", \"3rd\", \"3rd\", \"3rd\", \"3rd\", \"3rd\", \"2nd\"…\n$ survivor_victim &lt;chr&gt; \"S\", \"V\", \"V\", \"V\", \"S\", \"S\", \"S\", \"V\", \"S\", \"S\", \"V\",…\n$ lifeboat_number &lt;chr&gt; \"15\", NA, NA, NA, \"A\", \"16\", \"A\", NA, \"10\", \"15\", NA, …\n\n\n\ntf |&gt; arrange(surname)\n\n# A tibble: 1,317 × 7\n   surname      first_names  age   boarded class survivor_victim lifeboat_number\n   &lt;chr&gt;        &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt; &lt;chr&gt;           &lt;chr&gt;          \n 1 Ab ī-Al-Munà Mr Nās īf Q… 26    Cherbo… 3rd   S               15             \n 2 Abbing       Mr Anthony   42    Southa… 3rd   V               &lt;NA&gt;           \n 3 Abbott       Mrs Rhoda M… 39    Southa… 3rd   S               A              \n 4 Abbott       Mr Rossmore… 16    Southa… 3rd   V               &lt;NA&gt;           \n 5 Abbott       Mr Eugene J… 14    Southa… 3rd   V               &lt;NA&gt;           \n 6 Abelseth     Mr Olaus Jø… 25    Southa… 3rd   S               A              \n 7 Abelseth     Miss Karen … 16    Southa… 3rd   S               16             \n 8 Abelson      Mr Samuel    30    Cherbo… 2nd   V               &lt;NA&gt;           \n 9 Abelson      Mrs Hannah   28    Cherbo… 2nd   S               10             \n10 Abrahamsson  Mr Abraham … 20    Southa… 3rd   S               15             \n# ℹ 1,307 more rows\n\n\n\ntr |&gt; arrange(surname) |&gt; \n  filter(str_detect(first_names, \"Nas\"))\n\n  passenger_id survived  surname        first_names class  sex age  embarked\n1          208     TRUE Albimona  Mr. Nassef Cassem   3rd Male  26 Cherbourg"
+  },
+  {
+    "objectID": "02-charts.html",
+    "href": "02-charts.html",
+    "title": "Titanic charts",
+    "section": "",
+    "text": "Looking that the charts we could make with this.\nIdeas:"
+  },
+  {
+    "objectID": "02-charts.html#setup",
+    "href": "02-charts.html#setup",
+    "title": "Titanic charts",
+    "section": "Setup",
+    "text": "Setup\n\nlibrary(tidyverse)\nlibrary(janitor)"
+  },
+  {
+    "objectID": "02-charts.html#import",
+    "href": "02-charts.html#import",
+    "title": "Titanic charts",
+    "section": "Import",
+    "text": "Import\n\ntitanic &lt;- read_rds(\"data/tr_titanic.rds\")"
+  },
+  {
+    "objectID": "02-charts.html#class-of-passenger",
+    "href": "02-charts.html#class-of-passenger",
+    "title": "Titanic charts",
+    "section": "Class of passenger",
+    "text": "Class of passenger\n\nclass_lived &lt;- titanic |&gt; \n  count(survived, class)\n\nclass_lived\n\n  survived class   n\n1    FALSE   1st  80\n2    FALSE   2nd  97\n3    FALSE   3rd 372\n4     TRUE   1st 136\n5     TRUE   2nd  87\n6     TRUE   3rd 119\n\n\nPlot it\n\nclass_lived |&gt; \n  ggplot(aes(x = class, y = n, fill = survived)) +\n  geom_col() +\n  labs(\n    title = \"Class matters for survival on the Titanic\",\n    subtitle = \"The number of passengers by class that survived the Titanic\"\n  )\n\n\n\n\n\n\n\n\nRework this by percentages: Copilot version\n\ntitanic |&gt; \n  count(class, survived) |&gt; \n  group_by(class) |&gt; \n  mutate(percent = n / sum(n) * 100) |&gt; \n  ggplot(aes(x = class, y = percent, fill = survived)) +\n  geom_col() +\n  labs(\n    title = \"Class matters for survival on the Titanic\",\n    subtitle = \"The percentage of passengers by class that survived the Titanic\"\n  )\n\n\n\n\n\n\n\n\nTabyl version\n\ntitanic |&gt; \n  tabyl(class, survived) |&gt; \n  adorn_percentages() |&gt; \n  adorn_pct_formatting(digits = 0) |&gt; \n  rename(\"Died\" = `FALSE`, \"Survived\" = `TRUE`) |&gt;\n  mutate(\n    across(Died:Survived, parse_number)  \n  ) |&gt; \n  pivot_longer(cols = c(Survived, Died), names_to = \"Outcome\", values_to = \"Percent\") |&gt; \n  ggplot(aes(x = class, y = Percent, fill = Outcome)) +\n  geom_col()"
+  },
+  {
+    "objectID": "02-charts.html#by-age",
+    "href": "02-charts.html#by-age",
+    "title": "Titanic charts",
+    "section": "By age",
+    "text": "By age\n\ntitanic |&gt; \n  count(age_missing = is.na(age))\n\n  age_missing   n\n1       FALSE 714\n2        TRUE 177"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "r-titanic-data",
+    "section": "",
+    "text": "Preparing data from the Titanic for various lessons.\nI’m looking at two different sources:\n\nThe Titanic R package.\nThe Titanic Facts website\n\nThere are some columns in each data set that are not in the other, though perhaps those columns are not that useful.\nI’m leaning toward the Titanic Facts data because it has more records and seems to be geared toward record keeping vs data science."
+  }
+]

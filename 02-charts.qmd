@@ -1,0 +1,94 @@
+---
+title: "Titanic charts"
+---
+
+Looking that the charts we could make with this.
+
+Ideas:
+
+- By class
+- By sex
+- By age
+
+
+
+## Setup
+
+```{r}
+#| label: setup
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(janitor)
+```
+
+## Import
+
+```{r}
+titanic <- read_rds("data/tr_titanic.rds")
+```
+
+## Class of passenger
+
+```{r}
+class_lived <- titanic |> 
+  count(survived, class)
+
+class_lived
+```
+
+Plot it 
+
+```{r}
+class_lived |> 
+  ggplot(aes(x = class, y = n, fill = survived)) +
+  geom_col() +
+  labs(
+    title = "Class matters for survival on the Titanic",
+    subtitle = "The number of passengers by class that survived the Titanic"
+  )
+```
+
+Rework this by percentages: Copilot version
+
+```{r}
+titanic |> 
+  count(class, survived) |> 
+  group_by(class) |> 
+  mutate(percent = n / sum(n) * 100) |> 
+  ggplot(aes(x = class, y = percent, fill = survived)) +
+  geom_col() +
+  labs(
+    title = "Class matters for survival on the Titanic",
+    subtitle = "The percentage of passengers by class that survived the Titanic"
+  )
+```
+
+Tabyl version
+
+```{r}
+titanic |> 
+  tabyl(class, survived) |> 
+  adorn_percentages() |> 
+  adorn_pct_formatting(digits = 0) |> 
+  rename("Died" = `FALSE`, "Survived" = `TRUE`) |>
+  mutate(
+    across(Died:Survived, parse_number)  
+  ) |> 
+  pivot_longer(cols = c(Survived, Died), names_to = "Outcome", values_to = "Percent") |> 
+  ggplot(aes(x = class, y = Percent, fill = Outcome)) +
+  geom_col()
+  
+```
+
+
+## By age
+
+
+
+```{r}
+titanic |> 
+  count(age_missing = is.na(age))
+```
+

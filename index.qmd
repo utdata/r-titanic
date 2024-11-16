@@ -11,4 +11,5 @@ I'm looking at two different sources:
 
 There are some columns in each data set that are not in the other, though perhaps those columns are not that useful.
 
-I'm going with the R package data as it is more consistent.
+I'm leaning toward the Titanic Facts data because it has more records and seems to be geared toward record keeping vs data science.
+
